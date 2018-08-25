@@ -9,4 +9,7 @@ I make use of "Bugsnag" to track app crashes: https://www.bugsnag.com/
 
 Bugsnag's privacy policy can be found here: https://docs.bugsnag.com/legal/privacy-policy/
 
+Automatic crash tracking requires the `INTERNET` permission.
+Crash tracking can be disabled via settings.
+
 If you have further questions, just send me a mail.
