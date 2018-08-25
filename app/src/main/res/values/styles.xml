@@ -1,10 +1,10 @@
 <resources>
 
-    <style name="BaseAppTheme" parent="Theme.AppCompat">
+    <style name="BaseAppTheme" parent="Theme.MaterialComponents.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
         <item name="colorAccent">@color/secondaryColor</item>
-        <item name="preferenceTheme">@style/PreferenceThemeOverlay.v14.Material</item>
+        <item name="preferenceTheme">@style/PrefsTheme</item>
     </style>
 
     <style name="Theme.LauncherToMainActivity" parent="BaseAppTheme">
@@ -20,4 +20,7 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
+    <style name="PrefsTheme" parent="PreferenceThemeOverlay.v14.Material">
+        <item name="android:layout">@layout/settings_base_fragment</item>
+    </style>
 </resources>

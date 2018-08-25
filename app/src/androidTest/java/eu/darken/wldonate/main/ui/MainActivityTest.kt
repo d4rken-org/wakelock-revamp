@@ -3,20 +3,15 @@ package eu.thedarken.wldonate.main.ui
 
 import android.app.Activity
 import android.support.test.InstrumentationRegistry
-import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
-import android.support.test.espresso.matcher.ViewMatchers.withId
 import android.support.test.rule.ActivityTestRule
 import android.support.v4.app.Fragment
 import dagger.android.AndroidInjector
 import eu.darken.mvpbakery.injection.ComponentSource
 import eu.darken.mvpbakery.injection.ManualInjector
 import eu.thedarken.wldonate.ExampleApplicationMock
-import eu.thedarken.wldonate.R
-import eu.thedarken.wldonate.main.ui.fragment.ExampleFragment
-import eu.thedarken.wldonate.main.ui.fragment.ExampleFragmentComponent
-import eu.thedarken.wldonate.main.ui.fragment.ExampleFragmentPresenter
+import eu.thedarken.wldonate.main.ui.onboarding.OnboardingFragment
+import eu.thedarken.wldonate.main.ui.onboarding.OnboardingFragmentComponent
+import eu.thedarken.wldonate.main.ui.onboarding.OnboardingFragmentPresenter
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -29,18 +24,20 @@ import org.mockito.junit.MockitoRule
 
 class MainActivityTest {
 
+
     @get:Rule var mockitoRule: MockitoRule = MockitoJUnit.rule()
 
-    @get:Rule var activityRule = ActivityTestRule(OnboardingActivity::class.java, true, false)
+    @get:Rule var activityRule = ActivityTestRule(MainActivity::class.java, true, false)
 
     private lateinit var app: ExampleApplicationMock
 
-    @Mock lateinit var mainPresenter: OnboardingActivityPresenter
-    @Mock lateinit var mainComponent: OnboardingActivityComponent
+    @Mock lateinit var mainPresenter: MainActivityPresenter
+    @Mock lateinit var mainComponent: MainActivityComponent
 
     @Mock lateinit var fragmentInjector: ComponentSource<Fragment>
-    @Mock lateinit var exampleFragmentPresemter: ExampleFragmentPresenter
-    @Mock lateinit var exampleFragmentComponent: ExampleFragmentComponent
+    @Mock lateinit var navigator: Navigator
+    @Mock lateinit var onboardingFragmentPresenter: OnboardingFragmentPresenter
+    @Mock lateinit var onboardingFragmentComponent: OnboardingFragmentComponent
 
     @Before
     fun setUp() {
@@ -48,18 +45,19 @@ class MainActivityTest {
         app.setActivityComponentSource(ActivityInjector())
 
         doAnswer { invocation ->
-            val mainActivity = invocation.getArgument<OnboardingActivity>(0)
+            val mainActivity = invocation.getArgument<MainActivity>(0)
             mainActivity.fragmentInjector = fragmentInjector
+            mainActivity.navigator = navigator
             null
         }.`when`(mainComponent).inject(any())
         `when`(mainComponent.presenter).thenReturn(mainPresenter)
         `when`(mainPresenter.component).thenReturn(mainComponent)
 
 
-        doAnswer { invocation -> null }.`when`(exampleFragmentComponent).inject(any<ExampleFragment>())
-        `when`(fragmentInjector.get(any())).then { invocation -> exampleFragmentComponent }
-        `when`(exampleFragmentComponent.presenter).thenReturn(exampleFragmentPresemter)
-        `when`(exampleFragmentPresemter.component).thenReturn(exampleFragmentComponent)
+        doAnswer { invocation -> null }.`when`(onboardingFragmentComponent).inject(any<OnboardingFragment>())
+        `when`(fragmentInjector.get(any())).then { invocation -> onboardingFragmentComponent }
+        `when`(onboardingFragmentComponent.presenter).thenReturn(onboardingFragmentPresenter)
+        `when`(onboardingFragmentPresenter.component).thenReturn(onboardingFragmentComponent)
     }
 
     inner class ActivityInjector : ManualInjector<Activity> {
@@ -70,18 +68,14 @@ class MainActivityTest {
         }
 
         override fun inject(instance: Activity) {
-            mainComponent.inject(instance as OnboardingActivity)
+            mainComponent.inject(instance as MainActivity)
         }
 
     }
 
     @Test
     @Throws(Throwable::class)
-    fun checkFragmentShowing() {
+    fun testShowOnboarding() {
         activityRule.launchActivity(null)
-
-        activityRule.runOnUiThread { activityRule.activity.showExampleFragment() }
-
-        onView(withId(R.id.fab)).check(matches(isDisplayed()))
     }
 }

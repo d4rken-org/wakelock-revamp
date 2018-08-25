@@ -7,14 +7,14 @@ import dagger.Module
 import dagger.android.AndroidInjector
 import dagger.android.ServiceKey
 import dagger.multibindings.IntoMap
-import eu.thedarken.wldonate.main.core.service.ExampleService
-import eu.thedarken.wldonate.main.core.service.ExampleServiceComponent
+import eu.thedarken.wldonate.main.core.service.LockService
+import eu.thedarken.wldonate.main.core.service.LockServiceComponent
 
-@Module(subcomponents = arrayOf(ExampleServiceComponent::class))
+@Module(subcomponents = arrayOf(LockServiceComponent::class))
 internal abstract class ServiceBinderModule {
 
     @Binds
     @IntoMap
-    @ServiceKey(ExampleService::class)
-    internal abstract fun exampleService(impl: ExampleServiceComponent.Builder): AndroidInjector.Factory<out Service>
+    @ServiceKey(LockService::class)
+    internal abstract fun exampleService(impl: LockServiceComponent.Builder): AndroidInjector.Factory<out Service>
 }

@@ -4,11 +4,18 @@ import android.app.Activity
 import android.app.Application
 import android.app.Service
 import android.content.BroadcastReceiver
+import android.support.v7.app.AppCompatDelegate
+import com.bugsnag.android.Bugsnag
 import eu.darken.mvpbakery.injection.ComponentSource
 import eu.darken.mvpbakery.injection.ManualInjector
 import eu.darken.mvpbakery.injection.activity.HasManualActivityInjector
 import eu.darken.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
 import eu.darken.mvpbakery.injection.service.HasManualServiceInjector
+import eu.thedarken.wldonate.common.UUIDToken
+import eu.thedarken.wldonate.common.timber.BugsnagErrorHandler
+import eu.thedarken.wldonate.common.timber.BugsnagTree
+import eu.thedarken.wldonate.main.core.GeneralSettings
+import eu.thedarken.wldonate.main.core.service.ServiceController
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -19,6 +26,10 @@ open class App : Application(), HasManualActivityInjector, HasManualBroadcastRec
     @Inject lateinit var appComponent: AppComponent
     @Inject lateinit var receiverInjector: ComponentSource<BroadcastReceiver>
     @Inject lateinit var serviceInjector: ComponentSource<Service>
+    @Inject lateinit var serviceController: ServiceController
+
+    @Inject lateinit var settings: GeneralSettings
+    @Inject lateinit var uuidToken: UUIDToken
 
     override fun onCreate() {
         super.onCreate()
@@ -28,9 +39,19 @@ open class App : Application(), HasManualActivityInjector, HasManualBroadcastRec
                 .build()
                 .injectMembers(this)
 
-        activityInjector = appComponent.activityInjector()
+        val bugsnagClient = Bugsnag.init(this)
+        bugsnagClient.setUserId(uuidToken.id())
 
-        Timber.tag(TAG).d("onCreate() done!")
+        val bugsnagTree = BugsnagTree()
+        Timber.plant(bugsnagTree)
+        bugsnagClient.beforeNotify(BugsnagErrorHandler(settings, bugsnagTree))
+        Timber.i("Bugsnag setup done!")
+
+
+        activityInjector = appComponent.activityInjector()
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
+
+        Timber.d("onCreate() done!")
     }
 
     override fun activityInjector(): ManualInjector<Activity> {

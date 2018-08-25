@@ -2,14 +2,40 @@ apply plugin: 'com.android.application'
 apply plugin: "kotlin-kapt"
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
+apply plugin: 'com.bugsnag.android.gradle'
 
 def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
 def buildTime = new Date().format("yyyy-MM-dd'T'HH:mm:ss'Z'", TimeZone.getTimeZone("GMT+1"))
 
+bugsnag {
+    overwrite true
+}
+
 android {
     def packageName = "eu.thedarken.wldonate"
 
+    signingConfigs {
+        release {}
+    }
+    def signingPropFile = new File(System.properties['user.home'], ".appconfig/${packageName}/signing.properties")
+    if (signingPropFile.canRead()) {
+        Properties signingProps = new Properties()
+        signingProps.load(new FileInputStream(signingPropFile))
+        signingConfigs {
+            release {
+                storeFile new File(signingProps['release.storePath'])
+                keyAlias signingProps['release.keyAlias']
+                storePassword signingProps['release.storePassword']
+                keyPassword signingProps['release.keyPassword']
+            }
+        }
+    }
+
     compileSdkVersion buildConfig.compileSdk
+
+    Properties bugsnagProps = new Properties()
+    def bugsnagPropsFile = new File(System.properties['user.home'], ".appconfig/${packageName}/bugsnag.properties")
+    if (bugsnagPropsFile.canRead()) bugsnagProps.load(new FileInputStream(bugsnagPropsFile))
 
     defaultConfig {
         applicationId "${packageName}"
@@ -24,23 +50,10 @@ android {
         buildConfigField "String", "BUILDTIME", "\"${buildTime}\""
 
         testInstrumentationRunner "${packageName}.ExampleTestRunner"
-    }
 
-    signingConfigs {
-        release {}
-    }
-    def signingPropFile = new File(System.properties['user.home'], ".signing/${packageName}/signing.properties")
-    if (signingPropFile.canRead()) {
-        Properties signingProps = new Properties()
-        signingProps.load(new FileInputStream(signingPropFile))
-        signingConfigs {
-            release {
-                storeFile new File(signingProps['release.storePath'])
-                keyAlias signingProps['release.keyAlias']
-                storePassword signingProps['release.storePassword']
-                keyPassword signingProps['release.keyPassword']
-            }
-        }
+        manifestPlaceholders = [apikey_bugsnag: ""]
+
+        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -48,8 +61,10 @@ android {
 
         }
         release {
+            signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            manifestPlaceholders = [apikey_bugsnag: bugsnagProps.getProperty("bugsnag.apikey", "")]
         }
         applicationVariants.all { variant ->
             if (variant.buildType.name == "debug") {
@@ -82,10 +97,14 @@ dependencies {
     implementation "com.android.support:support-annotations:${versions.supportLibrary}"
     implementation "com.android.support:appcompat-v7:${versions.supportLibrary}"
     implementation "com.android.support:design:${versions.supportLibrary}"
+    implementation "com.android.support:customtabs:${versions.supportLibrary}"
     implementation "com.android.support.constraint:constraint-layout:1.1.2"
 
     // Crashtracking
     implementation 'com.bugsnag:bugsnag-android:4.3.1'
+
+    // IAPs
+    implementation 'com.android.billingclient:billing:1.0'
 
     // MVP lib
     implementation 'eu.darken.mvpbakery:library:0.4.1'
@@ -106,6 +125,8 @@ dependencies {
 
     //Timber
     implementation "com.jakewharton.timber:timber:4.7.0"
+
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
 
     // Testing
     testImplementation "junit:junit:4.12"

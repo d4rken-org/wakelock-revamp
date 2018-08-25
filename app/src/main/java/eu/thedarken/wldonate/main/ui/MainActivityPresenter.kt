@@ -7,23 +7,23 @@ import javax.inject.Inject
 
 class MainActivityPresenter @Inject
 constructor(
-        private val settings: GeneralSettings
+        private val settings: GeneralSettings,
+        private val navigator: Navigator
 ) : ComponentPresenter<MainActivityPresenter.View, MainActivityComponent>() {
+    private var initialLaunch: Boolean = true
 
     override fun onBindChange(view: View?) {
         super.onBindChange(view)
-
-        onView { v ->
-            when {
-                settings.showOnboarding() -> v.showOnboarding()
-                else -> v.showWakelockManagement()
+        if (initialLaunch) {
+            initialLaunch = false
+            onView {
+                when {
+                    settings.isShowOnboarding() -> navigator.goToOnboarding()
+                    else -> navigator.goToManagement()
+                }
             }
         }
-
     }
 
-    interface View : Presenter.View {
-        fun showWakelockManagement()
-        fun showOnboarding()
-    }
+    interface View : Presenter.View
 }

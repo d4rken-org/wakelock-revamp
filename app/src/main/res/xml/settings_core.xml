@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/label_category_general">
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_phone_android_white_24dp"
+            android:key="core.autostart.boot"
+            android:summary="@string/description_autostart_on_boot"
+            android:title="@string/label_autostart_on_boot"/>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:icon="@drawable/ic_call_white_24dp"
+            android:key="core.autostart.call"
+            android:summary="Aquire the selected wakelocks only during calls."
+            android:title="Autostart during calls"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/label_category_other">
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:icon="@drawable/ic_bug_report_white_24dp"
+            android:key="core.bugtracking.enabled"
+            android:summary="Automatic bug reporting to help fix issues faster."
+            android:title="@string/label_bugreporting"/>
+        <Preference
+            android:icon="@drawable/ic_info_white_24dp"
+            android:key="core.version"
+            android:title="@string/app_name">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://play.google.com/store/apps/details?id=eu.thedarken.wldonate"/>
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_data_usage_white_24dp"
+            android:key="core.privacy.policy"
+            android:summary="@string/description_privacy_policy"
+            android:title="@string/label_privacy_policy">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://raw.githubusercontent.com/d4rken/wakelock-revamp/master/PRIVACY_POLICY_GPLAY.md"/>
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_web_white_24dp"
+            android:key="core.homepage"
+            android:summary="@string/description_darken"
+            android:title="darken">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.darken.eu"/>
+        </Preference>
+
+        <Preference
+            android:icon="@drawable/ic_notification_stencil_icon"
+            android:key="core.thanks.maxpatchs"
+            android:summary="Thanks to Max Patchs for the wonderful icons."
+            android:title="Icon">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://twitter.com/maxpatchs"/>
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

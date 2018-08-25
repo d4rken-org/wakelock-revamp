@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="eu.thedarken.wldonate.eu.thedarken.wldonate.main.ui.MainActivity">
+    <item
+        android:id="@+id/action_pause"
+        android:icon="@drawable/ic_pause_circle_filled_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/action_pause"
+        android:visible="false"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_donate"
+        android:icon="@drawable/ic_coffee_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/action_donate"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/label_settings"
+        app:showAsAction="ifRoom"/>
+</menu>

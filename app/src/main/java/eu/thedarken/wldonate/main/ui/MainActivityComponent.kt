@@ -10,11 +10,15 @@ import dagger.android.support.FragmentKey
 import dagger.multibindings.IntoMap
 import eu.darken.mvpbakery.injection.PresenterComponent
 import eu.darken.mvpbakery.injection.activity.ActivityComponent
-import eu.thedarken.wldonate.main.ui.fragment.ExampleFragment
-import eu.thedarken.wldonate.main.ui.fragment.ExampleFragmentComponent
+import eu.thedarken.wldonate.main.ui.manager.ManagerFragment
+import eu.thedarken.wldonate.main.ui.manager.ManagerFragmentComponent
+import eu.thedarken.wldonate.main.ui.onboarding.OnboardingFragment
+import eu.thedarken.wldonate.main.ui.onboarding.OnboardingFragmentComponent
+import eu.thedarken.wldonate.main.ui.settings.SettingsFragment
+import eu.thedarken.wldonate.main.ui.settings.SettingsFragmentComponent
 
-@OnboardingActivityComponent.Scope
-@Subcomponent(modules = arrayOf(OnboardingActivityComponent.FragmentBinderModule::class))
+@MainActivityComponent.Scope
+@Subcomponent(modules = arrayOf(MainActivityComponent.FragmentBinderModule::class))
 interface MainActivityComponent : ActivityComponent<MainActivity>, PresenterComponent<MainActivityPresenter.View, MainActivityPresenter> {
 
     @Subcomponent.Builder
@@ -24,13 +28,26 @@ interface MainActivityComponent : ActivityComponent<MainActivity>, PresenterComp
     @Retention(AnnotationRetention.RUNTIME)
     annotation class Scope
 
-    @Module(subcomponents = arrayOf(ExampleFragmentComponent::class))
+    @Module(subcomponents = arrayOf(
+            OnboardingFragmentComponent::class,
+            ManagerFragmentComponent::class,
+            SettingsFragmentComponent::class
+    ))
     abstract class FragmentBinderModule {
 
         @Binds
         @IntoMap
-        @FragmentKey(ExampleFragment::class)
-        internal abstract fun exampleFragment(impl: ExampleFragmentComponent.Builder): AndroidInjector.Factory<out Fragment>
+        @FragmentKey(OnboardingFragment::class)
+        internal abstract fun onboarding(impl: OnboardingFragmentComponent.Builder): AndroidInjector.Factory<out Fragment>
 
+        @Binds
+        @IntoMap
+        @FragmentKey(ManagerFragment::class)
+        internal abstract fun manager(impl: ManagerFragmentComponent.Builder): AndroidInjector.Factory<out Fragment>
+
+        @Binds
+        @IntoMap
+        @FragmentKey(SettingsFragment::class)
+        internal abstract fun settings(impl: SettingsFragmentComponent.Builder): AndroidInjector.Factory<out Fragment>
     }
 }
