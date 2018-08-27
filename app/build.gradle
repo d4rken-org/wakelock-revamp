@@ -61,7 +61,7 @@ android {
 
         }
         release {
-            signingConfig signingConfigs.release
+            if (signingConfigs.hasProperty('release')) signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [apikey_bugsnag: bugsnagProps.getProperty("bugsnag.apikey", "")]
