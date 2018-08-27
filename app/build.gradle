@@ -14,9 +14,6 @@ bugsnag {
 android {
     def packageName = "eu.thedarken.wldonate"
 
-    signingConfigs {
-        release {}
-    }
     def signingPropFile = new File(System.properties['user.home'], ".appconfig/${packageName}/signing.properties")
     if (signingPropFile.canRead()) {
         Properties signingProps = new Properties()
