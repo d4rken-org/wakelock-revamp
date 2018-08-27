@@ -14,9 +14,6 @@ bugsnag {
 android {
     def packageName = "eu.thedarken.wldonate"
 
-    signingConfigs {
-        release {}
-    }
     def signingPropFile = new File(System.properties['user.home'], ".appconfig/${packageName}/signing.properties")
     if (signingPropFile.canRead()) {
         Properties signingProps = new Properties()
@@ -61,7 +58,7 @@ android {
 
         }
         release {
-            signingConfig signingConfigs.release
+            if (signingConfigs.hasProperty('release')) signingConfig signingConfigs.release
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             manifestPlaceholders = [apikey_bugsnag: bugsnagProps.getProperty("bugsnag.apikey", "")]
