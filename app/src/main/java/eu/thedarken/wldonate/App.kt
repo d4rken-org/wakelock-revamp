@@ -16,6 +16,7 @@ import eu.thedarken.wldonate.common.timber.BugsnagErrorHandler
 import eu.thedarken.wldonate.common.timber.BugsnagTree
 import eu.thedarken.wldonate.main.core.GeneralSettings
 import eu.thedarken.wldonate.main.core.service.ServiceController
+import eu.thedarken.wldonate.main.core.widget.WidgetController
 import timber.log.Timber
 import javax.inject.Inject
 
@@ -26,7 +27,11 @@ open class App : Application(), HasManualActivityInjector, HasManualBroadcastRec
     @Inject lateinit var appComponent: AppComponent
     @Inject lateinit var receiverInjector: ComponentSource<BroadcastReceiver>
     @Inject lateinit var serviceInjector: ComponentSource<Service>
+    // No touchy! Needs to be initialized such that they sub to the lock-controller.
+    @Suppress("unused")
     @Inject lateinit var serviceController: ServiceController
+    @Suppress("unused")
+    @Inject lateinit var widgetController: WidgetController
 
     @Inject lateinit var settings: GeneralSettings
     @Inject lateinit var uuidToken: UUIDToken
@@ -67,8 +72,6 @@ open class App : Application(), HasManualActivityInjector, HasManualBroadcastRec
     }
 
     companion object {
-        internal val TAG = logTag("ExampleApp")
-
         fun logTag(vararg tags: String): String {
             val sb = StringBuilder()
             for (i in tags.indices) {

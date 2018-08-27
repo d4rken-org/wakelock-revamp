@@ -9,8 +9,13 @@ import dagger.android.BroadcastReceiverKey
 import dagger.multibindings.IntoMap
 import eu.thedarken.wldonate.main.core.receiver.LockCommandReceiver
 import eu.thedarken.wldonate.main.core.receiver.LockCommandReceiverComponent
+import eu.thedarken.wldonate.main.core.widget.ToggleWidgetComponent
+import eu.thedarken.wldonate.main.core.widget.ToggleWidgetProvider
 
-@Module(subcomponents = arrayOf(LockCommandReceiverComponent::class))
+@Module(subcomponents = arrayOf(
+        LockCommandReceiverComponent::class,
+        ToggleWidgetComponent::class
+))
 internal abstract class ReceiverBinderModule {
 
     @Binds
@@ -18,4 +23,8 @@ internal abstract class ReceiverBinderModule {
     @BroadcastReceiverKey(LockCommandReceiver::class)
     internal abstract fun exampleReceiver(impl: LockCommandReceiverComponent.Builder): AndroidInjector.Factory<out BroadcastReceiver>
 
+    @Binds
+    @IntoMap
+    @BroadcastReceiverKey(ToggleWidgetProvider::class)
+    internal abstract fun widgetReceiver(impl: ToggleWidgetComponent.Builder): AndroidInjector.Factory<out BroadcastReceiver>
 }

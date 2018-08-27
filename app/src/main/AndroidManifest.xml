@@ -39,6 +39,20 @@
 
         <service android:name="eu.thedarken.wldonate.main.core.service.LockService"/>
 
+        <receiver
+            android:name="eu.thedarken.wldonate.main.core.widget.ToggleWidgetProvider"
+            android:icon="@drawable/ic_launcher_splash_bulb"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+                <action android:name="${applicationId}.widget.ACTION_UPDATE_WIDGET_FROM_SERVICE"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_toggle_info"/>
+        </receiver>
+
         <meta-data
             android:name="com.bugsnag.android.API_KEY"
             android:value="${apikey_bugsnag}"/>

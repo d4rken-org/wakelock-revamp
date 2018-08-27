@@ -21,6 +21,7 @@ import io.reactivex.schedulers.Schedulers
 import timber.log.Timber
 import javax.inject.Inject
 
+
 class LockService : SmartService() {
     companion object {
         @JvmStatic val NOTIFICATION_CHANNEL_ID: String = "core.notification.channel.status"
@@ -35,6 +36,7 @@ class LockService : SmartService() {
 
     private lateinit var statusNotifBuilder: NotificationCompat.Builder
     private var notifUpdateSub: Disposable = Disposables.disposed()
+    private var widgetUpdateSub: Disposable = Disposables.disposed()
 
     override fun onCreate() {
         (application as App).serviceInjector().inject(this)
@@ -56,14 +58,13 @@ class LockService : SmartService() {
         statusNotifBuilder.setContentIntent(openPI)
 
         val exitIntentBroadcast = Intent(this, LockCommandReceiver::class.java)
-        exitIntentBroadcast.action = "RELEASE_ALL_LOCKS"
+        exitIntentBroadcast.action = LockCommandReceiver.ACTION_STOP
         val exitPI = PendingIntent.getBroadcast(this, NOTIFICATION_PI_ID_EXIT, exitIntentBroadcast, PendingIntent.FLAG_UPDATE_CURRENT)
         statusNotifBuilder.addAction(NotificationCompat.Action.Builder(R.drawable.ic_pause_circle_filled_white_24dp, getString(R.string.action_pause), exitPI).build())
 
         startForeground(NOTIFICATION_SERVICE_ID, statusNotifBuilder.build())
         notifUpdateSub = lockController.locksPub
-                .subscribeOn(Schedulers.computation())
-                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.computation()).observeOn(AndroidSchedulers.mainThread())
                 .subscribe {
                     var acquired = 0
                     it.values.forEach { lock: Lock -> if (lock.isAcquired()) acquired++ }
@@ -79,7 +80,10 @@ class LockService : SmartService() {
 
     override fun onDestroy() {
         notifUpdateSub.dispose()
+        widgetUpdateSub.dispose()
         stopForeground(true)
+        // Sometimes stopForeground doesn't remove the notification, but just makes it removable
+        notificationManager.cancel(NOTIFICATION_SERVICE_ID)
         super.onDestroy()
     }
 

@@ -10,6 +10,7 @@ import android.os.PowerManager
 import android.preference.PreferenceManager
 import dagger.Module
 import dagger.Provides
+import java.io.File
 
 
 @Module
@@ -40,4 +41,9 @@ class AndroidModule(private val app: App) {
     @Provides
     @AppComponent.Scope
     fun packageManager(@ApplicationContext context: Context): PackageManager = context.packageManager
+
+    @SharedPrefsDir
+    @Provides
+    internal fun sharedPrefsDir(@ApplicationContext context: Context): File = File(context.cacheDir.parent, "shared_prefs")
+
 }

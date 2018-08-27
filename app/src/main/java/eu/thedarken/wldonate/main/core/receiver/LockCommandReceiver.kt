@@ -6,6 +6,7 @@ import android.content.Intent
 import android.telephony.TelephonyManager
 import eu.darken.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
 import eu.thedarken.wldonate.main.core.GeneralSettings
+import eu.thedarken.wldonate.main.core.locks.Lock
 import eu.thedarken.wldonate.main.core.locks.LockController
 import io.reactivex.schedulers.Schedulers
 import timber.log.Timber
@@ -14,7 +15,8 @@ import javax.inject.Inject
 
 class LockCommandReceiver : BroadcastReceiver() {
     companion object {
-        @JvmStatic val ACTION_EXIT = "RELEASE_ALL_LOCKS"
+        @JvmStatic val ACTION_STOP = "eu.thedarken.wldonate.actions.RELEASE_LOCKS"
+        @JvmStatic val ACTION_TOGGLE = "eu.thedarken.wldonate.actions.TOGGLE_LOCKS"
     }
 
     @Inject lateinit var lockController: LockController
@@ -35,9 +37,12 @@ class LockCommandReceiver : BroadcastReceiver() {
             return
         }
 
-        if (intent.action!! == ACTION_EXIT) {
-            Timber.i("Manual exit...")
+        if (intent.action!! == ACTION_STOP) {
+            Timber.i("Stop request")
             releaseAll()
+        } else if (intent.action!! == ACTION_TOGGLE) {
+            Timber.i("Toggle request.")
+            toggle()
         } else if (intent.action!! == Intent.ACTION_BOOT_COMPLETED && settings.isAutostartBootEnabled() && !settings.isAutostartCallEnabled()) {
             Timber.i("Reboot, restoring locks...")
             acquireSaved()
@@ -54,19 +59,38 @@ class LockCommandReceiver : BroadcastReceiver() {
     }
 
     private fun releaseAll() {
-        val async = goAsync()
+        var async: PendingResult? = null
         lockController.acquireExclusive(Collections.emptySet())
+                .doOnSubscribe { async = goAsync() }
                 .subscribeOn(Schedulers.computation())
-                .doFinally { async.finish() }
+                .doFinally { async?.finish() }
                 .subscribe()
     }
 
     private fun acquireSaved() {
-        val async = goAsync()
         val desired = settings.getSavedLocks()
+        var async: PendingResult? = null
         lockController.acquireExclusive(desired)
+                .doOnSubscribe { async = goAsync() }
                 .subscribeOn(Schedulers.computation())
-                .doFinally { async.finish() }
+                .doFinally { async?.finish() }
+                .subscribe()
+    }
+
+    private fun toggle() {
+        var async: PendingResult? = null
+        lockController.locksPub
+                .subscribeOn(Schedulers.computation())
+                .doOnSubscribe { async = goAsync() }
+                .compose { Lock.acquiredOnly(it) }
+                .firstOrError()
+                .flatMapCompletable {
+                    return@flatMapCompletable when {
+                        it.isEmpty() -> lockController.acquireExclusive(settings.getSavedLocks())
+                        else -> lockController.acquireExclusive(Collections.emptySet())
+                    }
+                }
+                .doFinally { async?.finish() }
                 .subscribe()
     }
 }

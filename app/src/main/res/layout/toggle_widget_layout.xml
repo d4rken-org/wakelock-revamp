@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@+id/widget"
+             style="@style/Widget.AppCompat.Button.Borderless"
+             xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_margin="0dp"
+             android:gravity="center"
+             android:padding="0dp">
+
+    <ImageView
+        android:id="@+id/widget_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/ic_widget_background"
+        tools:ignore="ContentDescription"/>
+
+    <ImageView
+        android:id="@+id/widget_bulb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:srcCompat="@drawable/ic_widget_bulb"
+        tools:ignore="ContentDescription"
+        tools:visibility="visible"/>
+
+</FrameLayout>
