@@ -1,0 +1,17 @@
+Wake Lock gives you access to Android's Power- and WifiManager.
+You can use it on any Android phone or tablet.
+
+Examples of what it can do for you:
+• Force the PowerManager to keep the screen on
+• Have the CPU still running in standby mode
+• Ensure the Wifi connection keeps running at full performance
+• Keep the screen on in full brightness or dimmed mode during movies
+• Override power saving measures if they are causing issues
+
+This is the modernized version of my app "WakeLock - PowerManager".
+
+What the permissions are used for:
+• WAKE_LOCK, to obviously be allowed to aquire wakelocks.
+• RECEIVE_BOOT_COMPLETED, to start the app after device reboots.
+• READ_PHONE_STATE, to act on start/ending calls, allowing the app to aquire a lock just for the duration of the call.
+• INTERNET, for automatic crash tracking. There is an option to disable this, but why would you 🙁?

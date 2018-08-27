@@ -1,0 +1,2 @@
+json_key_file "~/.appconfig/eu.thedarken.wldonate/dev-console.properties"
+package_name "eu.thedarken.wldonate"
