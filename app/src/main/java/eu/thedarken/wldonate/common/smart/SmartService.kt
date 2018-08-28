@@ -20,13 +20,7 @@ abstract class SmartService : Service() {
         super.onCreate()
     }
 
-    @Suppress("DEPRECATION", "OverridingDeprecatedMember")
-    override fun onStart(intent: Intent, startId: Int) {
-        Timber.tag(tag).d("onStart(intent=%s, startId=%d)", intent, startId)
-        super.onStart(intent, startId)
-    }
-
-    override fun onStartCommand(intent: Intent, flags: Int, startId: Int): Int {
+    override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Timber.tag(tag).d("onStartCommand(intent=%s, flags=%s startId=%d)", intent, flags, startId)
         return super.onStartCommand(intent, flags, startId)
     }
