@@ -59,9 +59,8 @@ class LockCommandReceiver : BroadcastReceiver() {
     }
 
     private fun releaseAll() {
-        var async: PendingResult? = null
+        val async = goAsync()
         lockController.acquireExclusive(Collections.emptySet())
-                .doOnSubscribe { async = goAsync() }
                 .subscribeOn(Schedulers.computation())
                 .doFinally { async?.finish() }
                 .subscribe()
@@ -69,19 +68,17 @@ class LockCommandReceiver : BroadcastReceiver() {
 
     private fun acquireSaved() {
         val desired = settings.getSavedLocks()
-        var async: PendingResult? = null
+        val async = goAsync()
         lockController.acquireExclusive(desired)
-                .doOnSubscribe { async = goAsync() }
                 .subscribeOn(Schedulers.computation())
                 .doFinally { async?.finish() }
                 .subscribe()
     }
 
     private fun toggle() {
-        var async: PendingResult? = null
+        val async = goAsync()
         lockController.locksPub
                 .subscribeOn(Schedulers.computation())
-                .doOnSubscribe { async = goAsync() }
                 .compose { Lock.acquiredOnly(it) }
                 .firstOrError()
                 .flatMapCompletable {
