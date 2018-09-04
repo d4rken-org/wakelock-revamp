@@ -52,7 +52,10 @@ android {
 
         vectorDrawables.useSupportLibrary = true
     }
-
+    lintOptions {
+        abortOnError false
+        ignore 'CheckResult'
+    }
     buildTypes {
         debug {
 
