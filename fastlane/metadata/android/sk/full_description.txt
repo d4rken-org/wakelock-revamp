@@ -1,0 +1,17 @@
+Funkcia Wake Lock vám umožňuje prístup k nástrojom Power- a WifiManager systému Android.
+Môžete ju použiť na akomkoľvek Android telefóne alebo tablete.
+
+Príklady toho, čo dokáže:
+• Donúti PowerManager udržať obrazovku zapnutú
+• Zaistí neustály chod procesora v pohotovostnom režime
+• Zaistí pripojenie Wifi na maximálny výkon
+• Počas prehrávania videa udrží jas obrazovky na maxime alebo v režime stlmenej obrazovky
+• Prepíše nastavenia úspory energie, ak spôsobujú problémy
+
+Toto je modernizovaná verzia aplikácie "WakeLock - PowerManager".
+
+Na čo sa používajú povolenia:
+• WAKE_LOCK, aby sa zariadenie prebudilo.
+• RECEIVE_BOOT_COMPLETED, aby sa aplikácia mohla spustiť po reštarte zariadenia.
+• READ_PHONE_STATE, na vykonanie akcie na začiatku/konci hovoru, čo umožňuje uzamknutie aplikácie počas volania.
+• INTERNET, na automatické sledovanie chýb. Existuje možnosť ako to zakázať, ale prečo by ste to robili 🙁?

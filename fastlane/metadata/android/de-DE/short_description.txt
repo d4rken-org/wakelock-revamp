@@ -1,0 +1,1 @@
+Einfache Kontrolle über Android's Energiemanagement.

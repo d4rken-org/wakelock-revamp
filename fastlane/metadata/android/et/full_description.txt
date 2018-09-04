@@ -1,0 +1,17 @@
+Wake Lock võimaldab hallata Androidi toite- ja Wi-Fi-haldurit.
+Seda saab kasutada kõigis Androidiga telefonides või nuhvlites.
+
+Sellega saab näiteks:
+• sundida PowerManageri ekraani sees hoidma;
+• lasta CPU-l töötada ooterežiimis;
+• tagada Wi-Fi ühenduse töötamist täisvõimsusel;
+• jätta ekraan filmide ajal võimalikult heledaks või tuhmiks;
+• asendada energiasäästu meetmed, kui need põhjustavad probleeme.
+
+See on minu rakenduse „WakeLock - PowerManager“ kaasaegsem versioon.
+
+Lubasid kasutatakse alljärgnevalt:
+• WAKE_LOCK luba kasutatakse ilmselgelt selleks, et rakendada unelukke;
+• RECEIVE_BOOT_COMPLETED luba on vaja rakenduse käivitamiseks pärast seadme taaskäivitust;
+• READ_PHONE_STATE luba on vaja kõnede alustamise/lõpetamise ajal töötamiseks eesmärgiga lukustuda ainult kõne ajaks;
+• INTERNET luba on vaja automaatseks vigade jälgimiseks. Seda saab ka keelata, ent miks peaksid? 🙁

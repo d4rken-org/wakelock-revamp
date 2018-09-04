@@ -1,0 +1,1 @@
+AndroidのPowerManagerを簡単に制御できます。

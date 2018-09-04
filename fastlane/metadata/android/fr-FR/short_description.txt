@@ -1,0 +1,1 @@
+Contrôle facile sur le PowerManager d'Android.

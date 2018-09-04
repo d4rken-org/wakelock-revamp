@@ -1,0 +1,17 @@
+Bangun Kunci memberikan Anda akses ke Daya dan Pengelola Wi-Fi Android.
+Anda dapat gunakan aplikasi ini pada ponsel atau tablet Android apa pun.
+
+Contoh apa yang dapat Anda lakukan:
+• Memaksa Pengelola Daya untuk menjaga layar tetap menyala
+• Memaksa CPU untuk tetap berjalan dalam modus siaga
+• Memastikan sambungan Wi-Fi tetap berjalan pada kinerja penuh
+• Menjaga layar tetap dalam modus redup atau kecerahan penuh selama pemutaran film
+• Menimpa tindakan penghematan daya jika dapat menyebabkan masalah
+
+Ini adalah versi mutakhir dari aplikasi saya "WakeLock - PowerManager".
+
+Perizinan yang digunakan:
+• WAKE_LOCK, memungkinkan akses untuk membangunkan penguncian.
+• RECEIVE_BOOT_COMPLETED, memungkinkan memulai aplikasi setelah menyalakan perangkat.
+• READ_PHONE_STATE, menjalankan tindakan saat panggilan dimulai/diakhiri, memungkinkan aplikasi mengunci hanya saat selama panggilan.
+• INTERNET, untuk pelacakan kerusakan otomatis. Terdapat pilihan untuk mematikan ini, tetapi mengapa Anda melakukannya 🙁?

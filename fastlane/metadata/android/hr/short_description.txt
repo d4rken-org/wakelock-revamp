@@ -1,0 +1,1 @@
+Lako upravljanje Androidovim upraviteljem energije.

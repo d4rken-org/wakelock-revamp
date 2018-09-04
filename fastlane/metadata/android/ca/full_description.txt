@@ -1,0 +1,17 @@
+Wake Lock us dóna accés al gestor de bateria i Wi-Fi d'Android.
+Podeu utilitzar-lo en qualsevol telèfon o tauleta Android.
+
+Exemples del que pot fer per vós:
+• Forçar al gestor d'energia a mantenir la pantalla encesa
+• Fer que la CPU encara treballi estant en mode d'espera
+• Assegurar que la connexió Wi-Fi segueix funcionant al màxim rendiment
+• Mantenir la pantalla encesa en mode de plena brillantor o atenuada durant les pel·lícules
+• Anul·lar les mesures d'estalvi d'energia si estan causant problemes
+
+Aquesta és la versió modernitzada de la meva aplicació «WakeLock - Gestor d'energia».
+
+Per a què es fan servir els permisos:
+• WAKE_LOCK, òbviament, se li permet adquirir bloquejos d'activació.
+• RECEIVE_BOOT_COMPLETED, per iniciar l'aplicació després de reiniciar el dispositiu.
+• READ_PHONE_STATE, per actuar a l'inici i al final de les trucades, permetent que l'aplicació adquireixi un bloqueig només durant la durada de la trucada.
+• INTERNET, per al seguiment automàtic de fallides. Hi ha una opció per desactivar això, però per què ho faries 🙁?

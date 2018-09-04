@@ -1,0 +1,17 @@
+WakeLock permite acesso ao gerenciador de energia e à conexão Wi-Fi do Android.
+Você pode usá-lo em qualquer celular ou tablet com Android.
+
+Exemplos do que pode fazer por você:
+• Forçar o gerenciador de energia a manter a tela ligada
+• Manter a CPU em execução no modo de espera
+• Garantir que a conexão Wi-Fi funcione com máximo desempenho
+• Manter a tela ligada no modo de brilho máximo ou no escurecido durante os filmes
+• Anular as medidas de economia de energia caso estejam causando problemas
+
+Esta é a versão modernizada do meu app "WakeLock - PowerManager".
+
+Para que as permissões são usadas:
+• WAKE_LOCK, para obviamente ser autorizado a adquirir wakelocks.
+• RECEIVE_BOOT_COMPLETED, para iniciar o app depois que o dispositivo for reinicializado.
+• READ_PHONE_STATE, para atuar em chamadas de início/término, permitindo que o app bloqueie apenas pela duração da chamada.
+• INTERNET, para rastreamento automático dos erros. Existe uma opção para desativar, mas por que você faria isso 🙁?

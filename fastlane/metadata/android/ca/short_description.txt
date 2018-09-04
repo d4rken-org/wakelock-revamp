@@ -1,0 +1,1 @@
+Fàcil control sobre el gestor d'energia d'Android.

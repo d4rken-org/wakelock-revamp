@@ -1,0 +1,1 @@
+Snadná kontrola funkce Android PowerManager.

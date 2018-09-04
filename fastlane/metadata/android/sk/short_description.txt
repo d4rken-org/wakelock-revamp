@@ -1,0 +1,1 @@
+Jednoduché ovládanie cez správcu napájania v systéme Android.

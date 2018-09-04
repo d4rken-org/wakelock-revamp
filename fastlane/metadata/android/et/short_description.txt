@@ -1,0 +1,1 @@
+Lihtne kontroll Androidi toitehalduse üle.

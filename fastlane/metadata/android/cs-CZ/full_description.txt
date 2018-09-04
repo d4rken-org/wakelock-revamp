@@ -1,0 +1,17 @@
+Wake Lock poskytuje přístup ke službám Android Power a Wi-Fi Manager.
+Můžete jej používat na libovolném telefonu nebo tabletu se systémem Android.
+
+Příklady toho, co pro vás může udělat:
+• Vynutit PowerManager udržet obrazovku zapnutou
+• Udržet CPU běžet v pohotovostním režimu
+• Zajistit, aby připojení Wi-Fi běželo na plný výkon
+• Udržet obrazovku v plném jasu nebo ve ztlumeném režimu pří přehrávání filmů
+• Pokud dojde k problémům, přepsat nastavení pro úsporu energie
+
+Toto je modernizovaná verze mé aplikace "WakeLock - PowerManager".
+
+Jaká oprávnění jsou používána:
+• WAKE_LOCK, k tomu, aby bylo povoleno zajistit wakelocky.
+• RECEIVE_BOOT_COMPLETED, ke spuštění aplikace po restartu zařízení.
+• READ_PHONE_STATE, k provedení akce na začátku/konci hovoru, což umožňuje uzamknutí aplikace během volání.
+• INTERNET, pro automatické sledování selhání. Můžete zakázat toto oprávnění, ale proč byste to dělali 🙁?

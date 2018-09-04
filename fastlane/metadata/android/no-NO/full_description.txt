@@ -1,0 +1,17 @@
+Wake Lock gir deg tilgang til Android's Strøm- og WifiManager.
+Du kan bruke den på hvilken som helst Android-telefon eller nettbrett.
+
+Eksempler på hva den kan gjøre for deg:
+• Tving StrømManageren til å holde skjermen på
+• La CPUen fremdeles kjøre i dvalemodus
+• Kontroller at Wifi-tilkoblingen fortsetter å kjøre på full ytelse
+• Hold skjermen på full lysstyrke eller dimmet modus under filmer
+• Overstyr energisparende tiltak hvis de forårsaker problemer
+
+Dette er den moderniserte versjonen av appen min "WakeLock - PowerManager".
+
+Hva tillatelsene brukes til:
+• WAKE_LOCK, åpenbart for å få lov til å kreve wakelocks.
+• RECEIVE_BOOT_COMPLETED, for å starte appen etter en omstart av enheten.
+• READ_PHONE_STATE, for å handle på starten/slutten av samtaler, slik at appen kan kreve en lås bare for lengden på samtalen.
+• INTERNET, for automatisk krasjsporing. Det er et alternativ å deaktivere dette, men hvorfor vil du det 🙁?

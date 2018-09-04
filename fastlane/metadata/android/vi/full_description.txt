@@ -1,0 +1,17 @@
+Wake Lock cho bạn quyền quản lý Nguồn cấp năng lượng Android và Trình quản lý Wifi.
+Bạn có thể dùng ứng dụng này trên bất kỳ điện thoại hoặc máy tính bảng Android nào.
+
+Ví dụ những thứ ứng dụng này có thể làm cho bạn:
+Buộc Trình quản lý năng lượng giữ màn hình luôn bật
+Giữ CPU luôn chạy trong chế độ chờ
+Đảm bảo Wifi luôn luôn kết nối ở công suất cao nhất
+Giữ màn hình luôn bật ở độ sáng cao nhất hoặc mờ đi trong lúc xem phim
+Kiểm soát chế độ tiết kiệm năng lượng nếu chúng gây ra lỗi
+
+Đây là phiên bản được cải tiến từ một ứng dụng của tôi "WakeLock - Trình quản lý năng lượng".
+
+Những quyền cần được cấp để:
+WAKE_LOCK, đương nhiên phải được cho phép để WakeLock hoạt động.
+RECEIVE_BOOT_COMPLETED, để khởi động ứng dụng sau mỗi làn khởi động lại máy.
+READ_PHONE_STATE, cho phép ứng dụng thực thi việc khóa mỗi khi bắt đầu/kết thúc cuộc gọi trong lúc nghe gọi.
+INTERNET, để tự động báo cáo lỗi. Có một tùy chọn để bạn tắt chức năng này, nhưng vì sao phải làm vậy nhỉ🤔?

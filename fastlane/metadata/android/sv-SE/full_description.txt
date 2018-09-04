@@ -1,0 +1,17 @@
+Wake Lock ger dig tillgång till din Androids batteri och WIFIhantering.
+Den kan användas på alla mobiltelefoner och surfplattor som är Android.
+
+Exempel på vad den kan göra:
+Tvinga din strömhanterate till att hålla igång skärmen
+Ha CPUn fortsatt körande i standby-läge
+• Kontrollera att Wifi-anslutning håller igång på full prestanda
+• Håller skärmen i full ljusstyrka eller nedtonade läge under filmer
+• Åsidosätt energibesparande åtgärder om de orsakar problem
+
+Detta är en moderniserad version av min app ”WakeLock – PowerManager”.
+
+Vad behörigheterna används för:
+• WAKE_LOCK, för att självklart tillåta skärmavslagningslåsande.
+• RECEIVE_BOOT_COMPLETED, för att starta appen efter omstart av enhet.
+• READ_PHONE_STATE, to act on start/ending calls, allowing the app to aquire a lock just for the duration of the call.
+• INTERNET, for automatic crash tracking. There is an option to disable this, but why would you 🙁?

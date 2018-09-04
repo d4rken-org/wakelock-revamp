@@ -1,0 +1,17 @@
+Wake Lock zapewnia dostęp do Menadżera zasilania i Wi-Fi w Androidzie.
+Możesz z niego korzystać na każdym telefonie i tablecie z Android.
+
+Przykłady tego, co możesz z jego pomocą wykonać:
+• Wymusić w Menadżerze zasilania, aby ekran był zawsze włączony
+• Ustawić, aby CPU zawsze pracował w trybie gotowości
+• Zapewnić działanie Wi-Fi z pełną wydajnością
+• Ustawić jasność ekranu na maksymalną lub przyciemnioną w czasie odtwarzania wideo
+• Nadpisać ustawienia oszczędzania energii, jeśli napotykasz problemy
+
+To jest odświeżona wersja aplikacji "WakeLock - PowerManager".
+
+Jakie uprawnienia są wymagane:
+• WAKE_LOCK, aby zapewnić wybudzanie urządzenia.
+• RECEIVE_BOOT_COMPLETED, aby uruchomić aplikację po ponownym uruchomieniu urządzenia.
+• READ_PHONE_STATE, aby wykonać czynność przy rozpoczęciu/zakończeniu rozmowy, zezwalając aplikacji na blokowanie w czasie trwania rozmowy.
+• INTERNET, aby automatycznie śledzić błędy. Istnieje możliwość wyłączenia tych uprawnień, ale dlaczego miałbyś to robić 🙁?
