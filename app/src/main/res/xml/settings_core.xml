@@ -12,8 +12,8 @@
             android:defaultValue="false"
             android:icon="@drawable/ic_call_white_24dp"
             android:key="core.autostart.call"
-            android:summary="Aquire the selected wakelocks only during calls."
-            android:title="Autostart during calls"/>
+            android:summary="@string/description_call_autostart"
+            android:title="@string/label_call_autostart"/>
     </PreferenceCategory>
     <PreferenceCategory
         android:title="@string/label_category_other">
@@ -21,7 +21,7 @@
             android:defaultValue="true"
             android:icon="@drawable/ic_bug_report_white_24dp"
             android:key="core.bugtracking.enabled"
-            android:summary="Automatic bug reporting to help fix issues faster."
+            android:summary="@string/description_bugreporting"
             android:title="@string/label_bugreporting"/>
         <Preference
             android:icon="@drawable/ic_info_white_24dp"
@@ -53,8 +53,7 @@
         <Preference
             android:icon="@drawable/ic_notification_stencil_icon"
             android:key="core.thanks.maxpatchs"
-            android:summary="Thanks to Max Patchs for the wonderful icons."
-            android:title="Icon">
+            android:summary="@string/description_icon_thanks_max_patchs">
             <intent
                 android:action="android.intent.action.VIEW"
                 android:data="https://twitter.com/maxpatchs"/>
