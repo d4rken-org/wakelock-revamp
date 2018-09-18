@@ -11,7 +11,7 @@ Examples of what it can do for you:
 This is the modernized version of my app "WakeLock - PowerManager".
 
 What the permissions are used for:
-• WAKE_LOCK, to obviously be allowed to aquire wakelocks.
+• WAKE_LOCK, to obviously be allowed to acquire wakelocks.
 • RECEIVE_BOOT_COMPLETED, to start the app after device reboots.
-• READ_PHONE_STATE, to act on start/ending calls, allowing the app to aquire a lock just for the duration of the call.
+• READ_PHONE_STATE, to act on start/ending calls, allowing the app to acquire a lock just for the duration of the call.
 • INTERNET, for automatic crash tracking. There is an option to disable this, but why would you 🙁?
