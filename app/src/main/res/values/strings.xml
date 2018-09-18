@@ -15,7 +15,7 @@
     <string name="label_wifilock_full_perf">Wi-Fi high performance</string>
     <string name="description_wifilock_full_perf">Wi-Fi will stay active and in high-performance mode even if the screen is off.</string>
     <string name="label_wifilock_scan_only">Wi-Fi scan-only</string>
-    <string name="description_wifilock_scan_only">When the phone goes into standby, Wi-Fi will be kept active but only scans are allowed.</string>
+    <string name="description_wifilock_scan_only">When the phone goes into standby, Wi-Fi will be kept active but only scans will be allowed.</string>
     <string name="label_notification_channel_status">Status</string>
     <string name="status_text_idle">Idle</string>
     <string name="galaxy_note4_issue_hint">Known to fix Galaxy Note 4 issues</string>
