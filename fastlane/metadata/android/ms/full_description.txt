@@ -1,0 +1,17 @@
+Wake Lock memberi anda akses untuk Kuasa Android- dan WifiManager.
+Ianya boleh anda gunakan pada mana-mana telefon Android atau tablet.
+
+Contoh apa yang boleh ia lakukan untuk anda:
+• Memaksa PowerManager agar skrin terus hidup
+• Membolehkan CPU terus berjalan di dalam mod bersedia
+• Memastikan sambungan Wifi terus berjalan pada prestasi sepenuhnya
+• Skrin terus hidup pada mod kecerahan penuh atau malap semasa tayangan
+• Mengatasi langkah penjimatan kuasa jika ianya menimbulkan isu
+
+Ini ialah versi modenisasi apl saya "WakeLock - PowerManager".
+
+Untuk apa kebenaran ini digunakan:
+• WAKE_LOCK, jelas untuk membolehkan wakelocks diperolehi.
+• TERIMA_BOOT_SELESAI, bagi memulakan apk setelah reboot peranti.
+• BACA_TELEFON_KEDUDUKAN, untuk bertindak pada mula/akhir panggilan, membolehkan apl untuk dapatkan kunci hanya dalam tempoh panggilan.
+• INTERNET, untuk menjejaki kecelaruan automatik. Ada opsyen untuk menyah dayakan ini, tetapi apa perlunya anda 🙁?

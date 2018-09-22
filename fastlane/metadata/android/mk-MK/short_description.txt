@@ -1,0 +1,1 @@
+Лесна контрола над Android's PowerManager.

@@ -1,0 +1,17 @@
+Wake Lock gives you access to Android's Power- and WifiManager.
+คุณสามารถใช้บนโทรศัพท์ Android หรือแท็บเล็ต
+
+ตัวอย่างของสิ่งที่สามารถทำให้คุณ:
+• บังคับให้ PowerManager เก็บหน้าจอไว้
+• Have the CPU still running in standby mode
+• Ensure the Wifi connection keeps running at full performance
+• Keep the screen on in full brightness or dimmed mode during movies
+• Override power saving measures if they are causing issues
+
+This is the modernized version of my app "WakeLock - PowerManager".
+
+การอนุญาตใช้สำหรับ:
+• WAKE_LOCK เพื่อให้เห็นได้ชัดว่าได้รับอนุญาตให้รับ wakelocks
+• RECEIVE_BOOT_COMPLETED เพื่อเริ่มแอปหลังจากรีบูตอุปกรณ์
+• READ_PHONE_STATE เพื่อดำเนินการในการเริ่มต้น / สิ้นสุดการโทรซึ่งทำให้แอปพลิเคชันสามารถรับล็อกได้ภายในระยะเวลาของการโทร
+• INTERNET, for automatic crash tracking. There is an option to disable this, but why would you 🙁?

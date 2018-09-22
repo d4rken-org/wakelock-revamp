@@ -1,0 +1,17 @@
+Wake Lock vam daje pristup Androidovom upravitelju energije i WiFi-ja.
+Može se koristiti na bilo kojem mobilnom telefonu ili tabletu s operacijskim sustavom Android.
+
+Primjeri što aplikacija može učiniti za vas:
+• natjerati upravitelja energijom da zadržava zaslon uključenim
+• zadržati CPU u radnom stanju tijekom stanja pripravnosti
+• osigurati pune performanse Wi-Fi veza
+• zadržati punu svjetlinu zaslona ili u zatamnjenom stanju tijekom filmova
+• ignorirati mjere uštede energije ako stvaraju probleme
+
+Ovo je modernizirana inačica moje aplikacije "WakeLock - PowerManager".
+
+Za što se koriste dopuštenja:
+• WAKE_LOCK, za pribavljanje wakelockova.
+• RECEIVE_BOOT_COMPLETED, za pokretanje aplikacije nakon ponovnog pokretanja uređaja.
+• READ_PHONE_STATE, za rad tijekom poziva, dopušta aplikaciji pribavljanje wakelockova samo tijekom poziva.
+• INTERNET, za automatski praćenje rušenja. Ovo je moguće isključiti, ali zašto biste to učinili 🙁?
