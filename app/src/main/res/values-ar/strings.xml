@@ -17,7 +17,6 @@
     <string name="label_wifilock_full_perf">Wi-Fi عالي الأداء</string>
     <string name="description_wifilock_full_perf">سوف يبقى الـWi-Fi نشطا وفي وضع الأداء العالى حتى لو الشاشة مطفأه.</string>
     <string name="label_wifilock_scan_only">Wi-Fi للفحص فقط</string>
-    <string name="description_wifilock_scan_only">عندما يذهب الهاتف إلى وضع الاستعداد، سيبقى الـ Wi-Fi نشطا لكن يسمح فقط لعمليات الفحص.</string>
     <string name="label_notification_channel_status">الحالة</string>
     <string name="status_text_idle">خامل</string>
     <string name="galaxy_note4_issue_hint">معروف أنه يحل مشاكل هاتف جلاكسى نوت 4</string>

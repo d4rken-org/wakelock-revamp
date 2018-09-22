@@ -11,7 +11,7 @@
 這是我的應用程式 "WakeLock-PowerManager" 的改進版本。
 
 權限的用途：
-• WAKE_LOCK，顯然是需要允許取得喚醒鎖。
+• WAKE_LOCK, to obviously be allowed to acquire wakelocks.
 · RECEIVE_BOOT_COMPLETED，在設備重新開機後啟動應用程式。
-• READ_PHONE_STATE，在開始/結束通話時採取行動，允許應用程式在通話期間進行鎖定。
+• READ_PHONE_STATE, to act on start/ending calls, allowing the app to acquire a lock just for the duration of the call.
 • INTERNET，用於自動追蹤崩潰問題。 這裡有一個可以禁用它的選項，但你為何要這樣做呢 🙁？

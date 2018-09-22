@@ -17,7 +17,7 @@
     <string name="label_wifilock_full_perf">Wi-Fi d\'alt rendiment</string>
     <string name="description_wifilock_full_perf">La Wi-Fi romandrà activa i en mode d\'alt rendiment fins i tot si la pantalla està apagada.</string>
     <string name="label_wifilock_scan_only">Només escaneig de Wi-Fi</string>
-    <string name="description_wifilock_scan_only">Quan el telèfon entri en mode d\'espera, la Wi-Fi es mantindrà activa, però només es permeten escanejos.</string>
+    <string name="description_wifilock_scan_only">Quan el telèfon entri en mode d\'espera, la Wi-Fi es mantindrà activa, però només es permetran escanejos.</string>
     <string name="label_notification_channel_status">Estat</string>
     <string name="status_text_idle">Inactiu</string>
     <string name="galaxy_note4_issue_hint">Se sap que soluciona problemes del Galaxy Note 4</string>
@@ -45,6 +45,10 @@
     <string name="label_donation">Donatiu</string>
     <string name="label_donation_edition">Edició de donació</string>
     <string name="msg_thank_you">Gràcies</string>
+    <string name="description_icon_thanks_max_patchs">Gràcies a Max Patches per les meravelloses icones.</string>
+    <string name="description_bugreporting">Informe automàtic d\'errors per ajudar a corregir problemes més ràpid.</string>
+    <string name="label_call_autostart">Inici automàtic durant les trucades</string>
+    <string name="description_call_autostart">Aconsegueix els bloquejos d\'activacions seleccionats només durant les trucades.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d bloqueig adquirit</item>
         <item quantity="other">%d bloquejos adquirits</item>

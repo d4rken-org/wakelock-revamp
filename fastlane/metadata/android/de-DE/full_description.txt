@@ -1,5 +1,5 @@
 Wake Lock gibt Dir Zugriff auf Androids Energie- und WLAN-Management.
-Sie können es auf jedem Android-Handy oder Tablet nutzen.
+Du kannst es auf jedem Android-Handy oder Tablet nutzen.
 
 Beispiele der Einsatzmöglichkeiten:
 • Das Energie-Management zwingen, den Bildschirm anzulassen
@@ -14,4 +14,4 @@ Für was die Berechtigungen verwendet werden:
 • WAKE_LOCK, offensichtlich um Wakelocks erlangen zu dürfen.
 • RECEIVE_BOOT_COMPLETED, um die App nach Hochfahren des Geräts zu starten.
 • READ_PHONE_STATE, um bei Anrufbeginn/-ende in Aktion zu treten und der App zu gestatten, einen Wakelock nur für die Dauer des Anrufs zu erlangen.
-• INTERNET, für automatische Absturzverfolgung. Es gibt eine Option, um dies zu deaktivieren, aber warum solltest Du 🙁?
+• INTERNET, für automatische Absturzverfolgung. Es gibt eine Option, um dies zu deaktivieren, aber warum würdest Du das machen 🙁?

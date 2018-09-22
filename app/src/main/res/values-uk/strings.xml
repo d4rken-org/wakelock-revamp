@@ -8,7 +8,7 @@
     <string name="description_wakelock_full">Підтримує максимальну яскравість екрану та клавіатури. У випадку натискання кнопки живлення, вейклок буде скасовано системою.</string>
     <string name="label_wakelock_partial">Процесор</string>
     <string name="description_wakelock_partial">Запобігає переходу ЦП до режиму очікування/енергозбереження, навіть якщо натиснуто кнопку живлення або сплив час увімкнення екрану. Якщо у Вашого пристрою проблеми з пробудженням, це саме те, що Вам потрібно.</string>
-    <string name="label_wakelock_screen_dim">Екран затінено</string>
+    <string name="label_wakelock_screen_dim">Затінення екрану</string>
     <string name="description_wakelock_screen_dim">Залишає екран увімкненим, проте допускає його затінення. У випадку натискання кнопки живлення, вейклок буде скасовано системою.</string>
     <string name="label_wakelock_screen_bright">Яскравість екрану</string>
     <string name="description_wakelock_screen_bright">Зберігає максимальну яскравість екрану. У випадку натискання кнопки живлення, вейклок буде скасовано системою.</string>
@@ -45,6 +45,10 @@
     <string name="label_donation">Пожертва</string>
     <string name="label_donation_edition">Меценатська версія</string>
     <string name="msg_thank_you">Дякую</string>
+    <string name="description_icon_thanks_max_patchs">Велика подяка Max Patchs за дивовижні іконки.</string>
+    <string name="description_bugreporting">Автоматичне звітування про помилки допомагає швидше виправляти недоліки.</string>
+    <string name="label_call_autostart">Автозапуск під час викликів</string>
+    <string name="description_call_autostart">Застосування обраних вейклоків лише під час викликів.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d вейклок застосовано</item>
         <item quantity="few">%d вейклоки застосовано</item>

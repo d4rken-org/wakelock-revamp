@@ -11,7 +11,7 @@ Esempi di cosa può fare per voi:
 Questa è la versione moderna della mia applicazione "WakeLock – PowerManager".
 
 Per cosa vengono utilizzate le autorizzazioni:
-• WAKE_LOCK, ovviamente acquisire il permesso dei wakelocks.
+• WAKE_LOCK, ovviamente è autorizzato ad acquisire wakelocks.
 • RECEIVE_BOOT_COMPLETED, per avviare l'applicazione dopo il riavvio del dispositivo.
-• READ_PHONE_STATE, ad agire a inizio/fine chiamata, consente al'app di acquisire un blocco solo per la durata della chiamata.
+• READ_PHONE_STATE, per agire sulle chiamate di inizio/fine, consentendo all'app di acquisire un blocco solo per la durata della chiamata.
 • INTERNET, per il rilevamento automatico di ciascun arresto anomalo. C'è un'opzione per disabilitare ciò, ma perché vorresti farlo 🙁?

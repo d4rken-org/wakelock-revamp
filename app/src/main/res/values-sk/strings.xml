@@ -45,10 +45,14 @@
     <string name="label_donation">Príspevok</string>
     <string name="label_donation_edition">Darcovská verzia</string>
     <string name="msg_thank_you">Ďakujem</string>
+    <string name="description_icon_thanks_max_patchs">Vďaka Max Patchs za super ikony.</string>
+    <string name="description_bugreporting">Automatické hlásenie chýb môže urýchliť opravy chýb.</string>
+    <string name="label_call_autostart">Automatické spustenie počas hovorov</string>
+    <string name="description_call_autostart">Nastaví vybrané wakelocks iba počas hovorov.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d získaný zámok</item>
         <item quantity="few">%d získané zámky</item>
-        <item quantity="many">%d získané zámky</item>
-        <item quantity="other">%d získané zámky</item>
+        <item quantity="many">%d získaných zámkov</item>
+        <item quantity="other">%d získaných zámkov</item>
     </plurals>
 </resources>

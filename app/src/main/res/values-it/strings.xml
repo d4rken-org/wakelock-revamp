@@ -17,7 +17,7 @@
     <string name="label_wifilock_full_perf">Wi-Fi ad alte prestazioni</string>
     <string name="description_wifilock_full_perf">Il Wi-Fi rimarrà attivo e alla massima prestazione anche a schermo spento.</string>
     <string name="label_wifilock_scan_only">Wi-Fi solo scansione</string>
-    <string name="description_wifilock_scan_only">Quando il telefono va in stand-by, il Wi-Fi sarà mantenuto attivo ma saranno consentite solo le scansioni.</string>
+    <string name="description_wifilock_scan_only">Quando il telefono entra in standby, il Wi-Fi sarà mantenuto attivo ma saranno consentite solo scansioni.</string>
     <string name="label_notification_channel_status">Stato</string>
     <string name="status_text_idle">Inattivo</string>
     <string name="galaxy_note4_issue_hint">Noto per risolvere i problemi di Galaxy Note 4</string>
@@ -45,6 +45,10 @@
     <string name="label_donation">Donazione</string>
     <string name="label_donation_edition">Edizione post donazione</string>
     <string name="msg_thank_you">Grazie</string>
+    <string name="description_icon_thanks_max_patchs">Grazie a Max Patchs per le meravigliose icone.</string>
+    <string name="description_bugreporting">Segnalazione automatica dei bug per aiutare a risolvere i problemi più velocemente.</string>
+    <string name="label_call_autostart">Avvio automatico durante le chiamate</string>
+    <string name="description_call_autostart">Acquisisci i wakelock selezionati solo durante le chiamate.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d blocco acquisito</item>
         <item quantity="other">%d blocchi acquisiti</item>

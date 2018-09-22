@@ -45,6 +45,10 @@
     <string name="label_donation">दान</string>
     <string name="label_donation_edition">दान संस्करण</string>
     <string name="msg_thank_you">धन्यवाद</string>
+    <string name="description_icon_thanks_max_patchs">अद्भुद आइकॉन के लिए मैक्स पचस को धन्यवाद</string>
+    <string name="description_bugreporting">स्वचालित त्रुटि विवरणी तेजी से मुद्दों को ठीक करने में सहायता करेगी।</string>
+    <string name="label_call_autostart">कॉल के दौरान पुनरारंभ करें</string>
+    <string name="description_call_autostart">केवल कॉल के दौरान चयनित वक्लॉक प्राप्त करें।</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d लॉक अधिग्रहण किया</item>
         <item quantity="other">%d लॉक अधिग्रहण किया</item>

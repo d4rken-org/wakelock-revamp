@@ -11,7 +11,7 @@
 这是我的应用程序 "WakeLock-PowerManager" 的现代化版本。
 
 权限的用途：
-• WAKE_LOCK, 显然是被允许获得唤醒锁。
+• WAKE_LOCK, to obviously be allowed to acquire wakelocks.
 · RECEIVE_BOOT_COMPLETED， 在设备重新启动后启动应用程序。
-• READ_PHONE_STATE，在开始/结束通话时采取行动，允许应用程序在通话期间获得一个锁。
+• READ_PHONE_STATE, to act on start/ending calls, allowing the app to acquire a lock just for the duration of the call.
 • INTERNET（联网），用于自动跟踪崩溃。 这里有一个可以禁用它的选项，但你为何要这样做呢？

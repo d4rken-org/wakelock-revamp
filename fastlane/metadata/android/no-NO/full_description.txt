@@ -11,7 +11,7 @@ Eksempler på hva den kan gjøre for deg:
 Dette er den moderniserte versjonen av appen min "WakeLock - PowerManager".
 
 Hva tillatelsene brukes til:
-• WAKE_LOCK, åpenbart for å få lov til å kreve wakelocks.
+• WAKE_LOCK, åpenbart for få lov til å kreve vekkelåser.
 • RECEIVE_BOOT_COMPLETED, for å starte appen etter en omstart av enheten.
-• READ_PHONE_STATE, for å handle på starten/slutten av samtaler, slik at appen kan kreve en lås bare for lengden på samtalen.
+• READ_PHONE_STATE, for å handle når anrop starter/slutter, slik at appen kan kreve en lås bare under samtalen.
 • INTERNET, for automatisk krasjsporing. Det er et alternativ å deaktivere dette, men hvorfor vil du det 🙁?

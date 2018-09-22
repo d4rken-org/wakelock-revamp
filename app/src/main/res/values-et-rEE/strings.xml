@@ -17,7 +17,7 @@
     <string name="label_wifilock_full_perf">Täisvõimsusel Wi-Fi</string>
     <string name="description_wifilock_full_perf">Wi-Fi jääb tööle täisvõimsusel isegi siis, kui ekraan on väljas.</string>
     <string name="label_wifilock_scan_only">Ainult skanneeriv Wi-Fi</string>
-    <string name="description_wifilock_scan_only">Kui telefon läheb ooterežiimile, jääb Wi-Fi sisse, ent lubatud on ainult skannid.</string>
+    <string name="description_wifilock_scan_only">Kui telefon läheb ooterežiimile, jääb Wi-Fi sisse, ent lubatakse ainult skannid.</string>
     <string name="label_notification_channel_status">Olek</string>
     <string name="status_text_idle">Ootel</string>
     <string name="galaxy_note4_issue_hint">Teatavasti parandab Galaxy Note 4 probleeme</string>
@@ -45,6 +45,10 @@
     <string name="label_donation">Annetus</string>
     <string name="label_donation_edition">Versioon annetajale</string>
     <string name="msg_thank_you">Aitäh</string>
+    <string name="description_icon_thanks_max_patchs">Tänan Max Patchsi toredate ikoonide eest.</string>
+    <string name="description_bugreporting">Automaatne veast teatamine probleemi kiiremaks lahendamiseks.</string>
+    <string name="label_call_autostart">Automaatne käivitus kõnede ajal</string>
+    <string name="description_call_autostart">Käivita valitud unelukud ainult kõnede ajal.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d lukk käivitatud</item>
         <item quantity="other">%d lukku käivitatud</item>

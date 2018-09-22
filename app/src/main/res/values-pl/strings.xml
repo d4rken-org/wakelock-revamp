@@ -45,6 +45,10 @@
     <string name="label_donation">Darowizna</string>
     <string name="label_donation_edition">Edycja darowizny</string>
     <string name="msg_thank_you">Dziękuję</string>
+    <string name="description_icon_thanks_max_patchs">Podziękowania dla Max\'a Patchs za wspaniałe ikony.</string>
+    <string name="description_bugreporting">Automatyczne zgłaszanie błędów, w celu przyspieszenia usprawnień.</string>
+    <string name="label_call_autostart">Automatyczne uruchomienie podczas rozmów</string>
+    <string name="description_call_autostart">Ustawienia wybrany blokady wybudzania tylko podczas rozmów.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d blokada ustawiona</item>
         <item quantity="few">%d blokady ustawione</item>

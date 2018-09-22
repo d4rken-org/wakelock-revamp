@@ -45,6 +45,10 @@
     <string name="label_donation">Пожертвование</string>
     <string name="label_donation_edition">Версия с пожертвованием</string>
     <string name="msg_thank_you">Спасибо</string>
+    <string name="description_icon_thanks_max_patchs">Спасибо Max Patchs за чудесные значки.</string>
+    <string name="description_bugreporting">Автоматическая отправка сообщений об ошибках для быстрого решения проблем.</string>
+    <string name="label_call_autostart">Автозапуск во время вызовов</string>
+    <string name="description_call_autostart">Выбранные вэйклоки удерживаются только во время вызовов.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">Вэйклоков удерживается: %d</item>
         <item quantity="few">Вэйклоков удерживается: %d</item>

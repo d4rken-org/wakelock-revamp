@@ -17,7 +17,6 @@
     <string name="label_wifilock_full_perf">Wi-Fi 高性能</string>
     <string name="description_wifilock_full_perf">即使屏幕关闭，Wi-Fi 仍将保持活跃和高性能模式。</string>
     <string name="label_wifilock_scan_only">仅限 Wi-Fi 扫描</string>
-    <string name="description_wifilock_scan_only">当设备进入待机状态时，Wi-Fi 将保持活动状态，但只允许扫描。</string>
     <string name="label_notification_channel_status">状态</string>
     <string name="status_text_idle">闲置</string>
     <string name="galaxy_note4_issue_hint">已知修复 Galaxy Note 4 问题</string>

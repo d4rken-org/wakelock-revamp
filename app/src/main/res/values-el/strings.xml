@@ -45,6 +45,10 @@
     <string name="label_donation">Δωρεά</string>
     <string name="label_donation_edition">Έκδοση Δωρεάς</string>
     <string name="msg_thank_you">Σας ευχαριστώ</string>
+    <string name="description_icon_thanks_max_patchs">Ευχαριστούμε το Max Patchs για τα υπέροχα εικονίδια.</string>
+    <string name="description_bugreporting">Αυτόματες αναφορές σφαλμάτων για να βοηθήσετε στην επίλυσή τους γρηγορότερα.</string>
+    <string name="label_call_autostart">Αυτόματο ξεκίνημα κατά την διάρκεια κλήσης</string>
+    <string name="description_call_autostart">Απέκτησε τα επιλεγμένα wakelocks μόνο κατά τη διάρκεια των κλήσεων.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d αποκτημένη κλειδαριά</item>
         <item quantity="other">%d αποκτημένες κλειδαριές</item>

@@ -17,7 +17,7 @@
     <string name="label_wifilock_full_perf">Wi-Fi - režim vysokého výkonu</string>
     <string name="description_wifilock_full_perf">Wi-Fi zůstane aktivní a v režimu vysokého výkonu, i když je obrazovka vypnutá.</string>
     <string name="label_wifilock_scan_only">Wi-Fi - pouze skenování</string>
-    <string name="description_wifilock_scan_only">Pokud telefon přejde do pohotovostního režimu, Wi-Fi zůstane aktivní, ale je povoleno pouze skenování.</string>
+    <string name="description_wifilock_scan_only">Pokud telefon přejde do pohotovostního režimu, Wi-Fi zůstane aktivní, ale bude povoleno pouze skenování.</string>
     <string name="label_notification_channel_status">Stav</string>
     <string name="status_text_idle">Nečinný</string>
     <string name="galaxy_note4_issue_hint">Je známo, že umí opravit problémy Galaxy Note 4</string>
@@ -45,6 +45,10 @@
     <string name="label_donation">Dar</string>
     <string name="label_donation_edition">Dárcovské vydání</string>
     <string name="msg_thank_you">Děkuji</string>
+    <string name="description_icon_thanks_max_patchs">Díky Max Patchs za báječné ikony.</string>
+    <string name="description_bugreporting">Automatické hlášení chyb může urychlit jejich opravy.</string>
+    <string name="label_call_autostart">Automatické spuštění během hovorů</string>
+    <string name="description_call_autostart">Získá vybrané wakelocky pouze během hovorů.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d získaný wakelock</item>
         <item quantity="few">%d získané wakelocky</item>

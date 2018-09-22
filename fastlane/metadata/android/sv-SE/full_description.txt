@@ -11,7 +11,7 @@ Ha CPUn fortsatt körande i standby-läge
 Detta är en moderniserad version av min app ”WakeLock – PowerManager”.
 
 Vad behörigheterna används för:
-• WAKE_LOCK, för att självklart tillåta skärmavslagningslåsande.
+• WAKE_LOCK, to obviously be allowed to acquire wakelocks.
 • RECEIVE_BOOT_COMPLETED, för att starta appen efter omstart av enhet.
-• READ_PHONE_STATE, to act on start/ending calls, allowing the app to aquire a lock just for the duration of the call.
+• READ_PHONE_STATE, to act on start/ending calls, allowing the app to acquire a lock just for the duration of the call.
 • INTERNET, for automatic crash tracking. There is an option to disable this, but why would you 🙁?

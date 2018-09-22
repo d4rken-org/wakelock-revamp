@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WakeLock v3</string>
+    <string name="app_name">Wakelock v3</string>
     <string name="label_settings">Settings</string>
     <string name="action_start">Start</string>
     <string name="label_wakelock_full">Screen and Keyboard</string>

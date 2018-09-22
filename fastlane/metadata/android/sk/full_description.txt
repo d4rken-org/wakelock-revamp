@@ -8,7 +8,7 @@ Príklady toho, čo dokáže:
 • Počas prehrávania videa udrží jas obrazovky na maxime alebo v režime stlmenej obrazovky
 • Prepíše nastavenia úspory energie, ak spôsobujú problémy
 
-Toto je modernizovaná verzia aplikácie "WakeLock - PowerManager".
+Toto je modernizovaná verzia mojej aplikácie "WakeLock - PowerManager".
 
 Na čo sa používajú povolenia:
 • WAKE_LOCK, aby sa zariadenie prebudilo.

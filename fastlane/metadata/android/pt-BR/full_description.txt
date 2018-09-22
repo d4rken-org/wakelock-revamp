@@ -13,5 +13,5 @@ Esta é a versão modernizada do meu app "WakeLock - PowerManager".
 Para que as permissões são usadas:
 • WAKE_LOCK, para obviamente ser autorizado a adquirir wakelocks.
 • RECEIVE_BOOT_COMPLETED, para iniciar o app depois que o dispositivo for reinicializado.
-• READ_PHONE_STATE, para atuar em chamadas de início/término, permitindo que o app bloqueie apenas pela duração da chamada.
+• READ_PHONE_STATE, para atuar no início/fim das chamadas, permitindo que o app adquira um bloqueio apenas para a duração da chamada.
 • INTERNET, para rastreamento automático dos erros. Existe uma opção para desativar, mas por que você faria isso 🙁?

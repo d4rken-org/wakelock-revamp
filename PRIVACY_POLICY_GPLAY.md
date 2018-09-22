@@ -1,4 +1,4 @@
-# Privacy policy for the app "WakeLock v3"
+# Privacy policy for the app "Wakelock v3"
 
 The app neither collects nor shares any data.
 

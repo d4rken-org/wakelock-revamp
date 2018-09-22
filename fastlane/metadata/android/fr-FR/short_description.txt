@@ -1,1 +1,1 @@
-Contrôle facile sur le PowerManager d'Android.
+Contrôle facile du gestionnaire d’alimentation d’Android.

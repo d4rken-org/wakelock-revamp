@@ -17,7 +17,7 @@
     <string name="label_wifilock_full_perf">Hohe WLAN Leistung</string>
     <string name="description_wifilock_full_perf">WLAN wird aktiv und im Modus für hohe Leistung bleiben, selbst falls der Bildschirm ausgeschalten ist.</string>
     <string name="label_wifilock_scan_only">Nur WLAN-Suche</string>
-    <string name="description_wifilock_scan_only">Wenn das Telefon in den Standby-Modus wechselt, wird das WLAN aktiv gehalten werden, jedoch nur Suchdurchläufe werden gestattet.</string>
+    <string name="description_wifilock_scan_only">Wenn das Telefon in Standby geht, wird WLAN aktiv gehalten werden, aber nur Scans werden erlaubt sein.</string>
     <string name="label_notification_channel_status">Status</string>
     <string name="status_text_idle">Leerlauf</string>
     <string name="galaxy_note4_issue_hint">Bekannt dafür, Probleme des Galaxy Note 4 zu beheben</string>
@@ -36,7 +36,7 @@
     <string name="description_onboarding_questions">Noch Fragen? Schreibe mir!</string>
     <string name="label_privacy_policy">Datenschutzrichtlinie</string>
     <string name="description_darken">Der Typ, der diese App geschrieben hat.</string>
-    <string name="description_privacy_policy">Was passiert mit Ihren Daten (Tipp: nichts).</string>
+    <string name="description_privacy_policy">Was passiert mit Deinen Daten (Tipp: nichts).</string>
     <string name="label_bugreporting">Fehlerberichterstattung</string>
     <string name="donation_coffee_label">Ein beruhigender Kaffee</string>
     <string name="donation_pizza_label">Eine leckere Pizza</string>
@@ -45,6 +45,10 @@
     <string name="label_donation">Spende</string>
     <string name="label_donation_edition">Spenden-Version</string>
     <string name="msg_thank_you">Vielen Dank</string>
+    <string name="description_icon_thanks_max_patchs">Vielen Dank an Max Patchs für die wunderbaren Symbole.</string>
+    <string name="description_bugreporting">Automatische Fehlermeldung um zu helfen, Probleme schneller zu beheben.</string>
+    <string name="label_call_autostart">Autostart bei Anrufen</string>
+    <string name="description_call_autostart">Die ausgewählten Wakelocks nur bei Anrufen erlangen.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d Wacklock erlangt</item>
         <item quantity="other">%d Wacklocks erlangt</item>

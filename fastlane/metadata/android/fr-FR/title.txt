@@ -1,1 +1,1 @@
-Wake Lock Revamp - PowerManager
+Gestionnaire d’alimentation « Wake Lock » repensé

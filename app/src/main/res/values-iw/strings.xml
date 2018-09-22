@@ -9,6 +9,7 @@
     <string name="label_wakelock_partial">מעבד</string>
     <string name="description_wakelock_partial">המעבד לא יכנס למצב המתנה/חיסכון בסוללה, גם אם לוחצים על כפתור ההפעלה או שהמסך נכבה. אם למכשירכם ישנה בעיה של התעוררות, זו הנעילה שאתם מעוניינים בה.</string>
     <string name="label_wakelock_screen_dim">מסך מעומעם</string>
+    <string name="description_wakelock_screen_dim">השארת המסך דלוק, עם אפשרות לעימעום. לחיצה על כפתור ההפעלה, הנעילה תשוחרר על ידי מערכת ההפעלה.</string>
     <string name="label_wakelock_screen_bright">בהירות מסך</string>
     <string name="description_wakelock_screen_bright">בהירות המסך נשארת מלאה. אם לוחצים על כפתור ההפעלה, הנעילה תשוחרר על ידי המערכת.</string>
     <string name="label_wifilock_full">Wi-Fi רגיל</string>
@@ -16,10 +17,19 @@
     <string name="label_wifilock_full_perf">Wi-Fi ביצועים גבוהים</string>
     <string name="description_wifilock_full_perf">Wi-Fi ישאר פעיל במצב ביצועים גבוהים גם אם המסך מכובה.</string>
     <string name="label_wifilock_scan_only">Wi-Fi סריקה בלבד</string>
+    <string name="description_wifilock_scan_only">כאשר הטלפון נכנס למצב המתנה, ה-Wi-Fi ישאר פעיל אבל יורשו רק סריקות.</string>
+    <string name="label_notification_channel_status">מצב</string>
+    <string name="status_text_idle">לא פעיל</string>
+    <string name="galaxy_note4_issue_hint">ידוע בתיקון בעיות בגלקסי נוט 4</string>
+    <string name="label_autostart_on_boot">הפעלה אוטומטית באתחול</string>
+    <string name="description_autostart_on_boot">רכישת הנעילות שהוגדרו אוטומטית לאחר איתחולים.</string>
     <string name="action_donate">תרומה</string>
     <string name="label_category_other">אחר</string>
     <string name="label_category_general">כללי</string>
+    <string name="pause_description_manually_resume">ניתן להחזיר ידנית את הנעילות על ידי לחיצה על הפעל.</string>
     <string name="action_pause">השהייה</string>
+    <string name="action_download_legacy_version">הורדת הגרסה הישנה</string>
+    <string name="description_onboarding_questions">שאלות נוספות? שלחו לי אימייל!</string>
     <string name="label_privacy_policy">מדיניות פרטיות</string>
     <string name="description_darken">האיש שכתב את האפליקציה הזו.</string>
     <string name="description_privacy_policy">מה קורה עם הנתונים שלכם (רמז: כלום).</string>
@@ -29,4 +39,15 @@
     <string name="donation_coffee_description">מה משאיר את המפתח ער בלילה? הקפה שלכם ובאגים של סמסונג.</string>
     <string name="donation_pizza_description">בניגוד לדעה הרווחת גם מפתחים צריכים למעשה לרכוש מזון:). עם בצלים, פטריות וסלמי בבקשה.</string>
     <string name="label_donation">תרומה</string>
+    <string name="label_donation_edition">מהדורת תרומה</string>
+    <string name="msg_thank_you">תודה לכם</string>
+    <string name="description_icon_thanks_max_patchs">תודה ל-Max Patchs על סמלים נפלאים.</string>
+    <string name="description_bugreporting">דיווח באגים אוטומטי לסיוע בפתרון בעיות מהר יותר.</string>
+    <string name="label_call_autostart">אתחול אוטומטי במהלך שיחות</string>
+    <plurals name="x_locks_acquired">
+        <item quantity="one">נעילה %d נרכשה</item>
+        <item quantity="two">%d נעילות נרכשו</item>
+        <item quantity="many">%d נעילות נרכשו</item>
+        <item quantity="other">%d נעילות נרכשו</item>
+    </plurals>
 </resources>

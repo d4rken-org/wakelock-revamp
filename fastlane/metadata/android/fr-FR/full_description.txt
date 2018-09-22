@@ -1,17 +1,17 @@
-Wake Lock vous donne accès au "Android's Power" et "WifiManager".
-Vous pouvez l’utiliser sur n’importe quel téléphone Android ou tablette.
+Le verrou d’éveil vous donne accès au gestionnaire de l’alimentation et du Wi-Fi d’Android.
+Vous pouvez l’utiliser sur n’importe quels téléphone ou tablette Android.
 
-Exemples de ce qu’il peut faire pour vous :
-• Force le PowerManager à garder l’écran allumé
-• Avoir le CPU encore en cours d’exécution en mode veille
-• S’assurer que la connexion Wifi continue à fonctionner à plein rendement
-• Gardez l’écran allumé en pleine luminosité ou en mode atténué pendant les films
-• Ignorer les mesures d'économie d'énergie si elles causent des problèmes
+Exemples de ce que l’appli peut faire pour vous :
+• Forcer le gestionnaire d’alimentation à garder l’écran allumé
+• Faire fonctionner le processeur en mode veille
+• Garantir que la connexion Wi-Fi continue de fonctionner à plein rendement
+• Garder l’écran allumé à pleine luminosité ou réduire la luminosité pendant les films
+• Ignorer les mesures d’économie d’énergie si elles posent des problèmes
 
-Il s’agit de la version modernisée de mon application « WakeLock – PowerManager ».
+Il s’agit de la version modernisée de mon application « Gestionnaire d’alimentation WakeLock ».
 
-Pourquoi les permissions sont utilisées :
-• WAKE_LOCK, évidemment pouvoir acquérir wakelocks.
-• RECEIVE_BOOT_COMPLETED, pour démarrer l'application après le redémarrage de l'appareil.
-• READ_PHONE_STATE, pour agir sur le début / la fin des appels, permettant à l'application d'acquérir un verrou uniquement pendant la durée de l'appel.
-• INTERNET, pour le suivi automatique des crashs. Il y a une option pour désactiver ceci, mais pourquoi vous?
+Ce pour quoi les autorisations sont utilisées :
+• WAKE_LOCK, afin d’être autorisé à mettre en place des verrous d’éveil.
+• RECEIVE_BOOT_COMPLETED, pour lancer l’appli après redémarrage de l’appareil.
+• READ_PHONE_STATE, pour agir sur le début et la fin des appels, permettant à l’appli de verrouiller l’éveil le temps de l’appel.
+• INTERNET, pour le suivi automatique des plantages. Il existe une option pour le désactiver, mais pourquoi vous le feriez-vous 🙁 ?

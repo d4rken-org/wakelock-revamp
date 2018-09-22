@@ -17,7 +17,7 @@
     <string name="label_wifilock_full_perf">Wi-Fi høy ytelse</string>
     <string name="description_wifilock_full_perf">Wi-Fi vil forbli aktiv og i høy ytelse modus, selv om skjermen er slått av.</string>
     <string name="label_wifilock_scan_only">Kun Wi-Fi-skanning</string>
-    <string name="description_wifilock_scan_only">Når telefonen går i dvalemodus, vil Wi-Fi forbli aktiv, men bare skanninger er tillatt.</string>
+    <string name="description_wifilock_scan_only">Når telefonen går i hvilemodus, vil Wi-Fi forbli aktiv, men bare skanninger vil bli tillatt.</string>
     <string name="label_notification_channel_status">Status</string>
     <string name="status_text_idle">Inaktiv</string>
     <string name="galaxy_note4_issue_hint">Kjent for å fikse Galaxy Note 4 problemer</string>
@@ -45,6 +45,10 @@
     <string name="label_donation">Donasjon</string>
     <string name="label_donation_edition">Doneringsversjon</string>
     <string name="msg_thank_you">Tusen takk</string>
+    <string name="description_icon_thanks_max_patchs">Takk til Max Patchs for de fantastiske ikonene.</string>
+    <string name="description_bugreporting">Automatisk feilrapportering for å løse problemer raskere.</string>
+    <string name="label_call_autostart">Autostart under samtaler</string>
+    <string name="description_call_autostart">Bare krev de valgte vekkelåsene under samtaler.</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">%d lås oppnådd</item>
         <item quantity="other">%d låser oppnådd</item>
