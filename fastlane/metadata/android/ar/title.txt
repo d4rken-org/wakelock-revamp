@@ -1,1 +1,1 @@
-Wake Lock Revamp - مدير الطاقة
+Wakelock Revamp - PowerManager

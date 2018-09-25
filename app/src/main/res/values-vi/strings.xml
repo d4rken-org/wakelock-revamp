@@ -17,6 +17,7 @@
     <string name="label_wifilock_full_perf">Wifi: Chế độ hiệu suất cao</string>
     <string name="description_wifilock_full_perf">Wifi sẽ luôn ở trạng thái hoạt động và vào chế độ hiệu suất cao dù màn hình có tắt.</string>
     <string name="label_wifilock_scan_only">Wifi: Chế độ chỉ quét</string>
+    <string name="description_wifilock_scan_only">Khi thiết bị rơi vào trạng thái chờ, Wifi sẽ luôn được giữ kích hoạt nhưng chỉ cho phép dò tìm tín hiệu.</string>
     <string name="label_notification_channel_status">Trạng thái</string>
     <string name="status_text_idle">Nghỉ</string>
     <string name="galaxy_note4_issue_hint">Được biết đến để khắc phục các vấn đề Galaxy Note 4</string>
@@ -44,4 +45,8 @@
     <string name="label_donation">Quyên góp</string>
     <string name="label_donation_edition">Nội dung đóng góp</string>
     <string name="msg_thank_you">Cảm ơn</string>
+    <string name="description_icon_thanks_max_patchs">Cảm ơn Max Patchs cho các biểu tượng tuyệt vời.</string>
+    <string name="description_bugreporting">Tự động báo cáo lỗi để giúp khắc phục sự cố nhanh hơn.</string>
+    <string name="label_call_autostart">Tự khởi động trong khi gọi</string>
+    <string name="description_call_autostart">Có các wakelocks được chọn chỉ trong cuộc gọi.</string>
 </resources>

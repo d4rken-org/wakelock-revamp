@@ -1,9 +1,9 @@
-Wake Lock gibt Dir Zugriff auf Androids Energie- und WLAN-Management.
+Wakelock gibt Dir Zugriff auf Androids Energie- und WLAN-Management.
 Du kannst es auf jedem Android-Handy oder Tablet nutzen.
 
 Beispiele der Einsatzmöglichkeiten:
 • Das Energie-Management zwingen, den Bildschirm anzulassen
-Die CPU im Standby-Modus weiterlaufen lassen
+Die CPU im Standby-Modus trotzdem weiterlaufen zu lassen
 Das Weiterlaufen der WLAN-Verbindung auf Höchstleistung sicherstellen
 • Halten Sie den Bildschirm auf voller Helligkeit oder im gedimmten Modus bei Filmen
 • Stromsparmaßnahmen außer Kraft setzen, falls diese Probleme verursachen

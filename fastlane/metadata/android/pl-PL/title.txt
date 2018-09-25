@@ -1,1 +1,1 @@
-Wake Lock - Menadżer zasilania (Odświeżony)
+WakeLock - Menadżer zasilania (Odświeżony)

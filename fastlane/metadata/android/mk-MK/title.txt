@@ -1,1 +1,1 @@
-Wake Lock Преработено - PowerManager
+Wakelock Revamp - PowerManager

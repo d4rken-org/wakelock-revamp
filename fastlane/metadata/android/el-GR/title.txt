@@ -1,1 +1,1 @@
-Ανασχεδιασμένο Wake Lock - PowerManager
+Wakelock Revamp - PowerManager

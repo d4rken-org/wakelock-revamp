@@ -1,1 +1,1 @@
-Wake Lock v3 - Gestor de energia
+Wakelock v3 - Gestor de energia

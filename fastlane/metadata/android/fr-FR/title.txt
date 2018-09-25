@@ -1,1 +1,1 @@
-Gestionnaire d’alimentation « Wake Lock » repensé
+Gestionnaire d’alimentation « Wakelock » repensé

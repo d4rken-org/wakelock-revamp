@@ -1,1 +1,1 @@
-Wake Lock Revamp - Gerenciador de Energia
+WakeLock Revamp - Gerenciador de Energia

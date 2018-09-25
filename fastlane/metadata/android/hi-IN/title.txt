@@ -1,1 +1,1 @@
-वेक लॉक रेवम्प - PowerManager
+Wakelock Revamp - PowerManager

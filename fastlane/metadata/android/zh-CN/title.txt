@@ -1,1 +1,1 @@
-唤醒锁修改 - 电源管理
+Wakelock Revamp - PowerManager

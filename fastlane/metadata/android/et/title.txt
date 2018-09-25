@@ -1,1 +1,1 @@
-Tuunitud Wake Lock - toitehaldus
+Tuunitud Wakelock - toitehaldus

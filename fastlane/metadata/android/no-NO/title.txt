@@ -1,1 +1,1 @@
-Wake Lock Fornyet - StrømManager
+Wakelock Fornyet - StrømManager

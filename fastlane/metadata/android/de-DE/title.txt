@@ -1,1 +1,1 @@
-Wake Lock v3 - Energie-Management
+Wakelock v3 - Energie-Management

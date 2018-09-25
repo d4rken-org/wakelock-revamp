@@ -1,1 +1,1 @@
-Wake Lock Revamp - керування живленням
+Wakelock Revamp - керування живленням
