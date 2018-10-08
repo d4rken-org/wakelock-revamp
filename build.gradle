@@ -3,7 +3,7 @@ buildscript {
             'compileSdk': 28,
             'minSdk'    : 16,
             'targetSdk' : 28,
-            'buildtools': '27.0.3',
+            'buildtools': '28.0.3',
 
             'version'   : [
                     'major': 3,
@@ -18,8 +18,8 @@ buildscript {
     ext.buildConfig.version['code'] = buildConfig.version.major * 1000000 + buildConfig.version.minor * 10000 + buildConfig.version.patch * 100 + buildConfig.version.build
 
     ext.versions = [
-            'supportLibrary'     : '28.0.0-alpha3',
-            'kotlin'             : '1.2.50',
+            'supportLibrary'     : '28.0.0',
+            'kotlin'             : '1.2.61',
             'kotlinCoroutines'   : '0.23.4',
             'kotlinSerialization': '0.6.0',
             'dagger'             : '2.16',
@@ -33,7 +33,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.2.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
         classpath 'com.bugsnag:bugsnag-android-gradle-plugin:3.2.5'
     }
