@@ -1,1 +1,1 @@
-Wakelock Revamp - PowerManager
+Wake Lock Revamp - upravitelj energije
