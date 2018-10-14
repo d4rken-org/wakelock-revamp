@@ -15,12 +15,18 @@ import javax.inject.Inject
 
 class LockCommandReceiver : BroadcastReceiver() {
     companion object {
-        @JvmStatic val ACTION_STOP = "eu.thedarken.wldonate.actions.RELEASE_LOCKS"
-        @JvmStatic val ACTION_TOGGLE = "eu.thedarken.wldonate.actions.TOGGLE_LOCKS"
+        @JvmStatic
+        val ACTION_STOP = "eu.thedarken.wldonate.actions.RELEASE_LOCKS"
+        @JvmStatic
+        val ACTION_TOGGLE = "eu.thedarken.wldonate.actions.TOGGLE_LOCKS"
+        @JvmStatic
+        val ACTION_CHECKUP = "eu.thedarken.wldonate.actions.CHECKUP"
     }
 
-    @Inject lateinit var lockController: LockController
-    @Inject lateinit var settings: GeneralSettings
+    @Inject
+    lateinit var lockController: LockController
+    @Inject
+    lateinit var settings: GeneralSettings
 
     override fun onReceive(context: Context, intent: Intent) {
         Timber.v("onReceive(%s, %s)", context, intent)
@@ -37,16 +43,16 @@ class LockCommandReceiver : BroadcastReceiver() {
             return
         }
 
-        if (intent.action!! == ACTION_STOP) {
+        if (intent.action == ACTION_STOP) {
             Timber.i("Stop request")
             releaseAll()
-        } else if (intent.action!! == ACTION_TOGGLE) {
+        } else if (intent.action == ACTION_TOGGLE) {
             Timber.i("Toggle request.")
             toggle()
-        } else if (intent.action!! == Intent.ACTION_BOOT_COMPLETED && settings.isAutostartBootEnabled() && !settings.isAutostartCallEnabled()) {
+        } else if (intent.action == Intent.ACTION_BOOT_COMPLETED && settings.isAutostartBootEnabled() && !settings.isAutostartCallEnabled()) {
             Timber.i("Reboot, restoring locks...")
             acquireSaved()
-        } else if (intent.action!! == TelephonyManager.ACTION_PHONE_STATE_CHANGED && settings.isAutostartCallEnabled()) {
+        } else if (intent.action == TelephonyManager.ACTION_PHONE_STATE_CHANGED && settings.isAutostartCallEnabled()) {
             val state = intent.getStringExtra(TelephonyManager.EXTRA_STATE)
             if (TelephonyManager.EXTRA_STATE_RINGING == state || TelephonyManager.EXTRA_STATE_OFFHOOK == state) {
                 Timber.i("Call incoming...")
@@ -55,6 +61,13 @@ class LockCommandReceiver : BroadcastReceiver() {
                 Timber.i("Call ended, stopping it...")
                 releaseAll()
             }
+        } else if (intent.action == Intent.ACTION_MY_PACKAGE_REPLACED && settings.isActive()) {
+            Timber.i("An update happened and we were previously active!")
+            acquireSaved()
+        } else if (intent.action == ACTION_CHECKUP) {
+            Timber.i("Self check, should we be active? -> ${settings.isActive()}")
+            if (settings.isActive()) acquireSaved()
+            else releaseAll()
         }
     }
 

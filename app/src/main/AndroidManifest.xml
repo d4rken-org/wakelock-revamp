@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest package="eu.thedarken.wldonate"
-          xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="eu.thedarken.wldonate">
 
-    <uses-permission android:name="android.permission.WAKE_LOCK"/>
-    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:name="eu.thedarken.wldonate.App"
@@ -14,14 +15,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/BaseAppTheme.NoActionBar">
+        android:theme="@style/BaseAppTheme.NoActionBar"
+        tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name="eu.thedarken.wldonate.main.ui.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.LauncherToMainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
@@ -30,31 +32,33 @@
             android:enabled="true"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED"/>
-                <action android:name="android.intent.action.PHONE_STATE"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.PHONE_STATE" />
 
-                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
-        <service android:name="eu.thedarken.wldonate.main.core.service.LockService"/>
+        <service android:name="eu.thedarken.wldonate.main.core.service.LockService" />
 
         <receiver
             android:name="eu.thedarken.wldonate.main.core.widget.ToggleWidgetProvider"
             android:icon="@drawable/ic_launcher_splash_bulb"
             android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
-                <action android:name="${applicationId}.widget.ACTION_UPDATE_WIDGET_FROM_SERVICE"/>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="${applicationId}.widget.ACTION_UPDATE_WIDGET_FROM_SERVICE" />
             </intent-filter>
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/widget_toggle_info"/>
+                android:resource="@xml/widget_toggle_info" />
         </receiver>
 
         <meta-data
             android:name="com.bugsnag.android.API_KEY"
-            android:value="${apikey_bugsnag}"/>
+            android:value="${apikey_bugsnag}" />
     </application>
 </manifest>

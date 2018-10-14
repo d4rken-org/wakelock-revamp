@@ -4,6 +4,7 @@ import android.app.Activity
 import android.app.Application
 import android.app.Service
 import android.content.BroadcastReceiver
+import android.content.Intent
 import android.support.v7.app.AppCompatDelegate
 import com.bugsnag.android.Bugsnag
 import eu.darken.mvpbakery.injection.ComponentSource
@@ -15,6 +16,7 @@ import eu.thedarken.wldonate.common.UUIDToken
 import eu.thedarken.wldonate.common.timber.BugsnagErrorHandler
 import eu.thedarken.wldonate.common.timber.BugsnagTree
 import eu.thedarken.wldonate.main.core.GeneralSettings
+import eu.thedarken.wldonate.main.core.receiver.LockCommandReceiver
 import eu.thedarken.wldonate.main.core.service.ServiceController
 import eu.thedarken.wldonate.main.core.widget.WidgetController
 import timber.log.Timber
@@ -56,7 +58,10 @@ open class App : Application(), HasManualActivityInjector, HasManualBroadcastRec
         activityInjector = appComponent.activityInjector()
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
 
-        Timber.d("onCreate() done!")
+        Timber.d("onCreate() done, requesting CHECKUP")
+        val checkupIntent = Intent(this, LockCommandReceiver::class.java)
+        checkupIntent.action = LockCommandReceiver.ACTION_CHECKUP
+        sendBroadcast(checkupIntent)
     }
 
     override fun activityInjector(): ManualInjector<Activity> {

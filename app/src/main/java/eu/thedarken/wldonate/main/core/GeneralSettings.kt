@@ -19,6 +19,7 @@ class GeneralSettings @Inject constructor(@ApplicationContext val context: Conte
         const val PREF_KEY_SAVED_LOCKS = "core.locks.saved"
         const val PREF_KEY_AUTOSTART_BOOT = "core.autostart.boot"
         const val PREF_KEY_AUTOSTART_CALL = "core.autostart.call"
+        const val PREF_KEY_ACTIVE = "core.paused"
     }
 
     private val preferences: SharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
@@ -44,7 +45,7 @@ class GeneralSettings @Inject constructor(@ApplicationContext val context: Conte
 
     fun getSavedLocks(): HashSet<Lock.Type> {
         val lockSet = HashSet<Lock.Type>()
-        for (s in preferences.getStringSet(PREF_KEY_SAVED_LOCKS, HashSet<String>())) {
+        for (s in preferences.getStringSet(PREF_KEY_SAVED_LOCKS, HashSet<String>())!!) {
             lockSet.add(Lock.Type.valueOf(s))
         }
         Timber.d("Loaded locks %s", lockSet)
@@ -56,6 +57,14 @@ class GeneralSettings @Inject constructor(@ApplicationContext val context: Conte
         val stringSet = HashSet<String>()
         toSave.forEach { stringSet.add(it.name) }
         preferences.edit().putStringSet(PREF_KEY_SAVED_LOCKS, stringSet).apply()
+    }
+
+    fun setActive(active: Boolean) {
+        preferences.edit().putBoolean(PREF_KEY_ACTIVE, active).apply()
+    }
+
+    fun isActive(): Boolean {
+        return preferences.getBoolean(PREF_KEY_ACTIVE, false)
     }
 
     fun isAutostartBootEnabled(): Boolean {
