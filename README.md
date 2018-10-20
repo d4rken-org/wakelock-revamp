@@ -25,7 +25,8 @@ Theoretically yes, but it will make the app more unreliable. A visible notificat
 * If you can code, maybe submit a PR fixing an [open issue](https://github.com/d4rken/wakelock-revamp/issues).
 
 ## Download
-[Google Play](https://play.google.com/store/apps/details?id=eu.thedarken.wldonate)
+* [Google Play](https://play.google.com/store/apps/details?id=eu.thedarken.wldonate)
+* [GitHub](https://github.com/d4rken/wakelock-revamp/releases/latest)
 
 ## Screenshots
 <img src="https://user-images.githubusercontent.com/1439229/44613749-b0947180-a818-11e8-8dd4-cf4c28414aaa.png" width="400"><img src="https://user-images.githubusercontent.com/1439229/44613750-b0947180-a818-11e8-8e71-9d5345154b74.png" width="400">
