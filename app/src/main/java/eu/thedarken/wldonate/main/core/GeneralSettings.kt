@@ -19,7 +19,7 @@ class GeneralSettings @Inject constructor(@ApplicationContext val context: Conte
         const val PREF_KEY_SAVED_LOCKS = "core.locks.saved"
         const val PREF_KEY_AUTOSTART_BOOT = "core.autostart.boot"
         const val PREF_KEY_AUTOSTART_CALL = "core.autostart.call"
-        const val PREF_KEY_ACTIVE = "core.paused"
+        const val PREF_KEY_ACTIVE = "core.paused"  // Shitty key name, using it inverted...
     }
 
     private val preferences: SharedPreferences = context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE)
