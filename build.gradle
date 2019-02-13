@@ -8,7 +8,7 @@ buildscript {
             'version'   : [
                     'major': 3,
                     'minor': 1,
-                    'patch': 4,
+                    'patch': 5,
                     'build': 0,
             ],
     ]
@@ -33,7 +33,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.1'
+        classpath 'com.android.tools.build:gradle:3.3.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$versions.kotlin"
         classpath 'com.bugsnag:bugsnag-android-gradle-plugin:3.2.5'
     }
