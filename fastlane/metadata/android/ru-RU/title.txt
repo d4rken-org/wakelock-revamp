@@ -1,1 +1,1 @@
-WakeLock Revamp - управление питанием
+Wakelock Revamp - PowerManager

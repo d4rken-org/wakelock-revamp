@@ -1,1 +1,1 @@
-Ανασχεδιασμένο Wake Lock - PowerManager
+Wake Lock - Διαχείριση Ενέργειας Μπαταρίας

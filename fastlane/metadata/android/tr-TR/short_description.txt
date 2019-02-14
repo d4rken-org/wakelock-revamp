@@ -1,1 +1,1 @@
-Android'in Güç Yöneticisi üzerinde kolay kontrol.
+Android'in Güç Yöneticisi üzerinde kolay kontrol sağlar.

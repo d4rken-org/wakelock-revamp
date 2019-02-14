@@ -2,16 +2,16 @@ Wake Lock, Android Güç ve Wifi Yöneticisine erişmenizi sağlar.
 Herhangi bir Android telefonda veya tablette kullanabilirsiniz.
 
 Sizin için neler yapabileceğine dair örnekler:
-• Ekranı açık tutmak için Güç yöneticisini zorlayın
-• İşlemcinin hala bekleme modunda çalışmasını sağlayın
-• Wifi bağlantısının tam performansta çalışmaya devam etmesini sağlayın
-• Filmler sırasında ekranı tam parlaklıkta veya karartılmış modda tutun
-• Sorunlara neden oluyorsa güç tasarrufu önlemlerini geçersiz kılın
+• Ekranı açık tutmak için Güç yöneticisini zorlar
+• İşlemcinin bekleme modunda dahi çalışmasını sağlar
+• Wifi bağlantısının tam performansta çalışmaya devam etmesini sağlar
+• Filmler sırasında ekranı tam parlaklıkta veya karartılmış modda tutar
+• Sorunlara neden oluyorsa güç tasarrufu önlemlerini geçersiz kılar
 
-Bu benim uygulamam "WakeLock - Güç Yöneticisi" modernize sürümüdür.
+Bu "WakeLock - Güç Yöneticisi" uygulamamın yenilenmiş sürümüdür.
 
-İzinlerin ne için kullanıldığı:
-• WAKE_LOCK, açıkçası wakelocks elde etmek için izin verilir.
+İzinlerin kullanılma sebepleri:
+• WAKE_LOCK, açıkçası wakelockları yakalamak için.
 • RECEIVE_BOOT_COMPLETED, cihaz yeniden başlatıldıktan sonra uygulamayı başlatmak için.
-• READ_PHONE_STATE, başlangıç/bitiş görüşmelerinde hareket etmek ve uygulamanın sadece arama süresi boyunca kilitli kalmasına izin vermek.
-• INTERNET, otomatik kilitlenmeyi izleme için. Bunu devre dışı bırakmak için bir seçenek var, ama neden yapardın 🙁?
+• READ_PHONE_STATE, görüşmelerin başlangıç/bitiş anlarında hareket etmek ve uygulamanın sadece arama süresi boyunca kilitli kalmasına izin vermek için.
+• INTERNET, otomatik kilitlenme, hata takibi için. Bunu devre dışı bırakmak için bir seçenek var, ama neden yapardın 🙁?
