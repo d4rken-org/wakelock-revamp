@@ -3,9 +3,9 @@ package eu.thedarken.wldonate
 import android.app.Activity
 import dagger.Binds
 import dagger.Module
-import dagger.android.ActivityKey
 import dagger.android.AndroidInjector
 import dagger.multibindings.IntoMap
+import eu.darken.mvpbakery.injection.activity.ActivityKey
 import eu.thedarken.wldonate.main.ui.MainActivity
 import eu.thedarken.wldonate.main.ui.MainActivityComponent
 

@@ -1,12 +1,11 @@
 package eu.thedarken.wldonate
 
 import android.content.BroadcastReceiver
-
 import dagger.Binds
 import dagger.Module
 import dagger.android.AndroidInjector
-import dagger.android.BroadcastReceiverKey
 import dagger.multibindings.IntoMap
+import eu.darken.mvpbakery.injection.broadcastreceiver.BroadcastReceiverKey
 import eu.thedarken.wldonate.main.core.receiver.LockCommandReceiver
 import eu.thedarken.wldonate.main.core.receiver.LockCommandReceiverComponent
 import eu.thedarken.wldonate.main.core.widget.ToggleWidgetComponent

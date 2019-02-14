@@ -1,12 +1,11 @@
 package eu.thedarken.wldonate
 
 import android.app.Service
-
 import dagger.Binds
 import dagger.Module
 import dagger.android.AndroidInjector
-import dagger.android.ServiceKey
 import dagger.multibindings.IntoMap
+import eu.darken.mvpbakery.injection.service.ServiceKey
 import eu.thedarken.wldonate.main.core.service.LockService
 import eu.thedarken.wldonate.main.core.service.LockServiceComponent
 
