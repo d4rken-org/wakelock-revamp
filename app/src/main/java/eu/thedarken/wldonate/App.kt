@@ -40,7 +40,12 @@ open class App : Application(), HasManualActivityInjector, HasManualBroadcastRec
 
     override fun onCreate() {
         super.onCreate()
+
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
+
+        val bugsnagTree = BugsnagTree()
+        Timber.plant(bugsnagTree)
+
         DaggerAppComponent.builder()
                 .androidModule(AndroidModule(this))
                 .build()
@@ -48,12 +53,14 @@ open class App : Application(), HasManualActivityInjector, HasManualBroadcastRec
 
         val bugsnagClient = Bugsnag.init(this)
         bugsnagClient.setUserId(uuidToken.id())
-
-        val bugsnagTree = BugsnagTree()
-        Timber.plant(bugsnagTree)
         bugsnagClient.beforeNotify(BugsnagErrorHandler(settings, bugsnagTree))
         Timber.i("Bugsnag setup done!")
 
+        val originalHandler = Thread.getDefaultUncaughtExceptionHandler()
+        Thread.setDefaultUncaughtExceptionHandler { thread, error ->
+            Timber.e(error, "$thread threw and uncaught exception")
+            originalHandler.uncaughtException(thread, error)
+        }
 
         activityInjector = appComponent.activityInjector()
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
