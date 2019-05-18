@@ -3,7 +3,6 @@ package eu.thedarken.wldonate.main.ui
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.support.v4.app.Fragment
 import eu.thedarken.wldonate.ApplicationContext
 import eu.thedarken.wldonate.R
 import eu.thedarken.wldonate.main.ui.manager.ManagerFragment
@@ -41,16 +40,16 @@ class Navigator @Inject constructor(
         switchFragment(SettingsFragment::class.java, true)
     }
 
-    private fun switchFragment(fragmentClazz: Class<out Fragment>, backstack: Boolean) {
+    private fun switchFragment(fragmentClazz: Class<out androidx.fragment.app.Fragment>, backstack: Boolean) {
         if (mainActivity == null) return
 
         val fm = mainActivity!!.supportFragmentManager
-        val current: Fragment? = fm.findFragmentById(R.id.content_frame)
+        val current: androidx.fragment.app.Fragment? = fm.findFragmentById(R.id.content_frame)
         if (fragmentClazz.isInstance(current)) {
             Timber.d("Fragment already added: %s", fragmentClazz)
             return
         }
-        val newFragment = Fragment.instantiate(mainActivity, fragmentClazz.name)
+        val newFragment = androidx.fragment.app.Fragment.instantiate(mainActivity, fragmentClazz.name)
         val trans = fm.beginTransaction()
         trans.replace(R.id.content_frame, newFragment)
         if (backstack) trans.addToBackStack(null)

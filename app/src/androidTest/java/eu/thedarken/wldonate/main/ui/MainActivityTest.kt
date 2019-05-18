@@ -2,9 +2,8 @@ package eu.thedarken.wldonate.main.ui
 
 
 import android.app.Activity
-import android.support.test.InstrumentationRegistry
-import android.support.test.rule.ActivityTestRule
-import android.support.v4.app.Fragment
+import androidx.test.InstrumentationRegistry
+import androidx.test.rule.ActivityTestRule
 import dagger.android.AndroidInjector
 import eu.darken.mvpbakery.injection.ComponentSource
 import eu.darken.mvpbakery.injection.ManualInjector
@@ -34,7 +33,7 @@ class MainActivityTest {
     @Mock lateinit var mainPresenter: MainActivityPresenter
     @Mock lateinit var mainComponent: MainActivityComponent
 
-    @Mock lateinit var fragmentInjector: ComponentSource<Fragment>
+    @Mock lateinit var fragmentInjector: ComponentSource<androidx.fragment.app.Fragment>
     @Mock lateinit var navigator: Navigator
     @Mock lateinit var onboardingFragmentPresenter: OnboardingFragmentPresenter
     @Mock lateinit var onboardingFragmentComponent: OnboardingFragmentComponent

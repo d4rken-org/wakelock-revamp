@@ -2,7 +2,7 @@ package eu.thedarken.wldonate.main.core
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.support.v7.preference.PreferenceManager
+import androidx.preference.PreferenceManager
 import eu.thedarken.wldonate.AppComponent
 import eu.thedarken.wldonate.ApplicationContext
 import eu.thedarken.wldonate.main.core.locks.Lock

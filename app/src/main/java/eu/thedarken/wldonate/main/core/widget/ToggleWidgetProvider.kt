@@ -11,11 +11,11 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import android.graphics.drawable.Drawable
 import android.os.Bundle
-import android.support.annotation.DrawableRes
-import android.support.v7.content.res.AppCompatResources
 import android.util.DisplayMetrics
 import android.view.View
 import android.widget.RemoteViews
+import androidx.annotation.DrawableRes
+import androidx.appcompat.content.res.AppCompatResources
 import eu.darken.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
 import eu.thedarken.wldonate.R
 import eu.thedarken.wldonate.common.ApiHelper

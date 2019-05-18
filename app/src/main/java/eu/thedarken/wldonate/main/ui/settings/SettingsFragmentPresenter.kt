@@ -25,7 +25,7 @@ class SettingsFragmentPresenter @Inject constructor(
                     it.onSuccess(packageInfo.versionName + "(" + packageInfo.versionCode + ")")
                 }
                 .subscribeOn(Schedulers.computation()).observeOn(AndroidSchedulers.mainThread())
-                .subscribe { version -> onView { it.updateVersion(version) } }
+                .subscribe { version -> withView { it.updateVersion(version) } }
     }
 
 

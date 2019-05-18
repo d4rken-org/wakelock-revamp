@@ -3,7 +3,7 @@ package eu.thedarken.wldonate
 import android.app.Activity
 import android.content.Context
 import android.graphics.drawable.Drawable
-import android.support.v7.content.res.AppCompatResources
+import androidx.appcompat.content.res.AppCompatResources
 import com.android.billingclient.api.*
 import io.reactivex.Single
 import io.reactivex.schedulers.Schedulers

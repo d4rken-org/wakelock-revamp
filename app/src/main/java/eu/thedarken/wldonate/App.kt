@@ -5,7 +5,7 @@ import android.app.Application
 import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Intent
-import android.support.v7.app.AppCompatDelegate
+import androidx.appcompat.app.AppCompatDelegate
 import com.bugsnag.android.Bugsnag
 import eu.darken.mvpbakery.injection.ComponentSource
 import eu.darken.mvpbakery.injection.ManualInjector

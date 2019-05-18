@@ -1,15 +1,14 @@
 package testhelper
 
-import android.support.test.rule.ActivityTestRule
-import android.support.v4.app.Fragment
+import androidx.test.rule.ActivityTestRule
 import eu.darken.mvpbakery.injection.ManualInjector
 import eu.thedarken.wldonate.FragmentTestActivity
 import junit.framework.Assert
 
-class FragmentTestRule<FragmentT : Fragment>(private val fragmentClass: Class<FragmentT>) : ActivityTestRule<FragmentTestActivity>(FragmentTestActivity::class.java, true, false) {
+class FragmentTestRule<FragmentT : androidx.fragment.app.Fragment>(private val fragmentClass: Class<FragmentT>) : ActivityTestRule<FragmentTestActivity>(FragmentTestActivity::class.java, true, false) {
     var fragment: FragmentT? = null
         private set
-    internal lateinit var manualInjector: ManualInjector<Fragment>
+    internal lateinit var manualInjector: ManualInjector<androidx.fragment.app.Fragment>
 
     override fun afterActivityLaunched() {
         super.afterActivityLaunched()
@@ -38,7 +37,7 @@ class FragmentTestRule<FragmentT : Fragment>(private val fragmentClass: Class<Fr
         }
     }
 
-    fun setManualInjector(manualInjector: ManualInjector<Fragment>) {
+    fun setManualInjector(manualInjector: ManualInjector<androidx.fragment.app.Fragment>) {
         this.manualInjector = manualInjector
     }
 }

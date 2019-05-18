@@ -3,7 +3,6 @@ package eu.thedarken.wldonate.common.smart
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.View
 import butterknife.Unbinder
 import eu.thedarken.wldonate.App
@@ -11,7 +10,7 @@ import timber.log.Timber
 import java.util.*
 
 
-abstract class SmartFragment : Fragment() {
+abstract class SmartFragment : androidx.fragment.app.Fragment() {
     internal val tag: String
 
     init {

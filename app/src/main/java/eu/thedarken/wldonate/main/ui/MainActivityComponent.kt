@@ -1,7 +1,6 @@
 package eu.thedarken.wldonate.main.ui
 
 
-import android.support.v4.app.Fragment
 import dagger.Binds
 import dagger.Module
 import dagger.Subcomponent
@@ -18,8 +17,8 @@ import eu.thedarken.wldonate.main.ui.settings.SettingsFragment
 import eu.thedarken.wldonate.main.ui.settings.SettingsFragmentComponent
 
 @MainActivityComponent.Scope
-@Subcomponent(modules = arrayOf(MainActivityComponent.FragmentBinderModule::class))
-interface MainActivityComponent : ActivityComponent<MainActivity>, PresenterComponent<MainActivityPresenter.View, MainActivityPresenter> {
+@Subcomponent(modules = [MainActivityComponent.FragmentBinderModule::class])
+interface MainActivityComponent : ActivityComponent<MainActivity>, PresenterComponent<MainActivityPresenter, MainActivityComponent> {
 
     @Subcomponent.Builder
     abstract class Builder : ActivityComponent.Builder<MainActivity, MainActivityComponent>()
@@ -34,16 +33,16 @@ interface MainActivityComponent : ActivityComponent<MainActivity>, PresenterComp
         @Binds
         @IntoMap
         @FragmentKey(OnboardingFragment::class)
-        internal abstract fun onboarding(impl: OnboardingFragmentComponent.Builder): AndroidInjector.Factory<out Fragment>
+        internal abstract fun onboarding(impl: OnboardingFragmentComponent.Builder): AndroidInjector.Factory<out androidx.fragment.app.Fragment>
 
         @Binds
         @IntoMap
         @FragmentKey(ManagerFragment::class)
-        internal abstract fun manager(impl: ManagerFragmentComponent.Builder): AndroidInjector.Factory<out Fragment>
+        internal abstract fun manager(impl: ManagerFragmentComponent.Builder): AndroidInjector.Factory<out androidx.fragment.app.Fragment>
 
         @Binds
         @IntoMap
         @FragmentKey(SettingsFragment::class)
-        internal abstract fun settings(impl: SettingsFragmentComponent.Builder): AndroidInjector.Factory<out Fragment>
+        internal abstract fun settings(impl: SettingsFragmentComponent.Builder): AndroidInjector.Factory<out androidx.fragment.app.Fragment>
     }
 }

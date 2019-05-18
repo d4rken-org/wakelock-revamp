@@ -16,7 +16,7 @@ constructor(
         super.onBindChange(view)
         if (initialLaunch) {
             initialLaunch = false
-            onView {
+            withView {
                 when {
                     settings.isShowOnboarding() -> navigator.goToOnboarding()
                     else -> navigator.goToManagement()

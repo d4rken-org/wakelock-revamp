@@ -2,7 +2,7 @@ package eu.thedarken.wldonate.main.core.service
 
 import android.content.Context
 import android.content.Intent
-import android.support.v4.content.ContextCompat
+import androidx.core.content.ContextCompat
 import eu.thedarken.wldonate.AppComponent
 import eu.thedarken.wldonate.ApplicationContext
 import eu.thedarken.wldonate.main.core.locks.Lock

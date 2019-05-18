@@ -6,7 +6,7 @@ import android.app.PendingIntent
 import android.content.Intent
 import android.os.Build
 import android.os.IBinder
-import android.support.v4.app.NotificationCompat
+import androidx.core.app.NotificationCompat
 import eu.thedarken.wldonate.App
 import eu.thedarken.wldonate.R
 import eu.thedarken.wldonate.common.smart.SmartService

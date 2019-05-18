@@ -1,10 +1,11 @@
 package eu.thedarken.wldonate.main.ui
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import butterknife.ButterKnife
 import eu.darken.mvpbakery.base.MVPBakery
+import eu.darken.mvpbakery.base.PresenterRetainer
 import eu.darken.mvpbakery.base.ViewModelRetainer
 import eu.darken.mvpbakery.injection.ComponentSource
 import eu.darken.mvpbakery.injection.InjectedPresenter
@@ -27,11 +28,13 @@ class MainActivity : AppCompatActivity(), MainActivityPresenter.View, HasManualF
         MVPBakery.builder<MainActivityPresenter.View, MainActivityPresenter>()
                 .presenterFactory(InjectedPresenter(this))
                 .presenterRetainer(ViewModelRetainer(this))
-                .addPresenterCallback {
-                    val component = it.component
-                    component.inject(this@MainActivity)
-                    navigator.mainActivity = this@MainActivity
-                }
+                .addPresenterCallback(object : PresenterRetainer.Callback<MainActivityPresenter.View, MainActivityPresenter> {
+                    override fun onPresenterAvailable(presenter: MainActivityPresenter) {
+                        val component = presenter.component
+                        component.inject(this@MainActivity)
+                        navigator.mainActivity = this@MainActivity
+                    }
+                })
                 .attach(this)
 
         setContentView(R.layout.main_activity)

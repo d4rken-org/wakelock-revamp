@@ -18,7 +18,7 @@ class OnboardingFragmentPresenter @Inject constructor(
         super.onBindChange(view)
         if (settings.isLegacyUser()) {
             showingLegacyExplanation = true
-            onView { v -> v.showLegacyExplanation(true) }
+            withView { v -> v.showLegacyExplanation(true) }
         }
     }
 

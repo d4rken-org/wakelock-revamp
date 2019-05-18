@@ -1,16 +1,13 @@
-package eu.thedarken.wldonate.main.ui.manager
+package eu.thedarken.wldonate.main.ui.onboarding
 
-import android.support.test.espresso.Espresso.onView
-import android.support.test.espresso.action.ViewActions.click
-import android.support.test.espresso.assertion.ViewAssertions.matches
-import android.support.test.espresso.matcher.ViewMatchers.isDisplayed
-import android.support.test.espresso.matcher.ViewMatchers.withId
-import android.support.v4.app.Fragment
+import androidx.test.espresso.Espresso.onView
+import androidx.test.espresso.action.ViewActions.click
+import androidx.test.espresso.assertion.ViewAssertions.matches
+import androidx.test.espresso.matcher.ViewMatchers.isDisplayed
+import androidx.test.espresso.matcher.ViewMatchers.withId
 import dagger.android.AndroidInjector
 import eu.darken.mvpbakery.injection.ManualInjector
-import eu.thedarken.wldonate.main.ui.onboarding.OnboardingFragment
-import eu.thedarken.wldonate.main.ui.onboarding.OnboardingFragmentComponent
-import eu.thedarken.wldonate.main.ui.onboarding.OnboardingFragmentPresenter
+import eu.thedarken.wldonate.R
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -31,13 +28,13 @@ class OnboardingFragmentTest {
     @Mock lateinit var component: OnboardingFragmentComponent
 
 
-    private val injector = object : ManualInjector<Fragment> {
-        override fun get(instance: Fragment): AndroidInjector<Fragment> {
+    private val injector = object : ManualInjector<androidx.fragment.app.Fragment> {
+        override fun get(instance: androidx.fragment.app.Fragment): AndroidInjector<androidx.fragment.app.Fragment> {
             @Suppress("UNCHECKED_CAST")
-            return component as AndroidInjector<Fragment>
+            return component as AndroidInjector<androidx.fragment.app.Fragment>
         }
 
-        override fun inject(fragment: Fragment) {
+        override fun inject(fragment: androidx.fragment.app.Fragment) {
 
         }
     }

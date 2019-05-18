@@ -41,7 +41,7 @@ class ManagerFragmentPresenter @Inject constructor(
             controller.locksPub
                     .subscribeOn(Schedulers.computation()).observeOn(AndroidSchedulers.mainThread())
                     .subscribe { locks: Map<Lock.Type, Lock> ->
-                        onView {
+                        withView {
                             val savedLocks = settings.getSavedLocks()
                             it.showLocks(
                                     ArrayList(locks.values),
@@ -73,7 +73,7 @@ class ManagerFragmentPresenter @Inject constructor(
                         purchases
                     }
                     .subscribe { purchases ->
-                        onView {
+                        withView {
                             val level: Float = (purchases.size / IAPHelper.Upgrade.Type.values().size).toFloat()
                             it.updateDonationOptions(level)
                         }
@@ -127,12 +127,12 @@ class ManagerFragmentPresenter @Inject constructor(
                     it.values.forEach { if (it.isPurchased()) nonPurchased.remove(it) }
                     return@map nonPurchased
                 }
-                .subscribe { openPurchases -> onView { it.showDonationScreen(openPurchases) } }
+                .subscribe { openPurchases -> withView { it.showDonationScreen(openPurchases) } }
     }
 
     fun onDonate(upgrade: IAPHelper.Upgrade, activity: Activity) {
         iapHelper.startDonationFlow(upgrade, activity)
-        onView { it.showThanks() }
+        withView { it.showThanks() }
     }
 
     interface View : Presenter.View {

@@ -1,13 +1,13 @@
 package eu.thedarken.wldonate.main.ui.manager
 
 import android.os.Bundle
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.content.res.AppCompatResources
-import android.support.v7.widget.*
 import android.view.*
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.content.res.AppCompatResources
+import androidx.appcompat.widget.Toolbar
 import butterknife.BindView
 import butterknife.ButterKnife
 import eu.darken.mvpbakery.base.MVPBakery
@@ -24,7 +24,7 @@ import javax.inject.Inject
 class ManagerFragment : SmartFragment(), ManagerFragmentPresenter.View {
 
     @BindView(R.id.toolbar) lateinit var toolbar: Toolbar
-    @BindView(R.id.recyclerview) lateinit var recyclerView: RecyclerView
+    @BindView(R.id.recyclerview) lateinit var recyclerView: androidx.recyclerview.widget.RecyclerView
     @BindView(R.id.info_card_paused_desc) lateinit var pauseDesc: TextView
     @BindView(R.id.info_card_paused) lateinit var pauseBox: View
 
@@ -54,11 +54,11 @@ class ManagerFragment : SmartFragment(), ManagerFragmentPresenter.View {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        val dividerDecorator = DividerItemDecoration(requireActivity(), DividerItemDecoration.VERTICAL)
+        val dividerDecorator = androidx.recyclerview.widget.DividerItemDecoration(requireActivity(), androidx.recyclerview.widget.DividerItemDecoration.VERTICAL)
         recyclerView.addItemDecoration(dividerDecorator)
-        val layoutManager = LinearLayoutManager(context)
+        val layoutManager = androidx.recyclerview.widget.LinearLayoutManager(context)
         recyclerView.layoutManager = layoutManager
-        recyclerView.itemAnimator = DefaultItemAnimator()
+        recyclerView.itemAnimator = androidx.recyclerview.widget.DefaultItemAnimator()
         recyclerView.setHasFixedSize(true)
         recyclerView.adapter = adapter
 

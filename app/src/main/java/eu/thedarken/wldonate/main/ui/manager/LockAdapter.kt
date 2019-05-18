@@ -1,12 +1,11 @@
 package eu.thedarken.wldonate.main.ui.manager
 
 import android.content.Context
-import android.support.v4.content.ContextCompat
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import butterknife.BindView
 import butterknife.ButterKnife
 import eu.thedarken.wldonate.R
@@ -14,7 +13,7 @@ import eu.thedarken.wldonate.main.core.locks.Lock
 import eu.thedarken.wldonate.main.core.locks.Lock.Type.*
 
 
-class LockAdapter(val callback: Callback) : RecyclerView.Adapter<LockAdapter.VH>() {
+class LockAdapter(val callback: Callback) : androidx.recyclerview.widget.RecyclerView.Adapter<LockAdapter.VH>() {
     private val data: ArrayList<Lock> = ArrayList()
     private val saved: HashSet<Lock.Type> = HashSet()
 
@@ -44,7 +43,7 @@ class LockAdapter(val callback: Callback) : RecyclerView.Adapter<LockAdapter.VH>
     }
 
     class VH(parent: ViewGroup, private val callback: Callback)
-        : RecyclerView.ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.manager_lock_adapter_line, parent, false)) {
+        : androidx.recyclerview.widget.RecyclerView.ViewHolder(LayoutInflater.from(parent.context).inflate(R.layout.manager_lock_adapter_line, parent, false)) {
         @BindView(R.id.lock_label) lateinit var label: TextView
         @BindView(R.id.lock_description) lateinit var description: TextView
         @BindView(R.id.highlight) lateinit var highlight: View

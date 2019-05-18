@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="16dp"
@@ -135,7 +135,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/what_not_description"
                 tools:visibility="visible"/>
 
-            <android.support.design.button.MaterialButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/legacy_action"
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="0dp"
@@ -177,10 +177,10 @@
                 app:layout_constraintTop_toBottomOf="@+id/legacy_action"/>
 
 
-        </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
 
-    <android.support.design.button.MaterialButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/action_start"
         style="@style/Base.Widget.AppCompat.Button.Colored"
         android:layout_width="match_parent"
@@ -198,4 +198,4 @@
         app:layout_constraintTop_toBottomOf="@+id/scroll_container"/>
 
 
-</android.support.constraint.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
