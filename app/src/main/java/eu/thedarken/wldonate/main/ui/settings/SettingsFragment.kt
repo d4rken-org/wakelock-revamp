@@ -35,7 +35,7 @@ class SettingsFragment : PreferenceFragmentCompat(), SettingsFragmentPresenter.V
         super.onActivityCreated(savedInstanceState)
         rxPermissions = RxPermissions(this)
 
-        (findPreference("core.autostart.call") as CheckBoxPreference).onPreferenceChangeListener = Preference.OnPreferenceChangeListener { pref: Preference?, newValue: Any? ->
+        (findPreference<CheckBoxPreference>("core.autostart.call") as CheckBoxPreference).onPreferenceChangeListener = Preference.OnPreferenceChangeListener { pref: Preference?, newValue: Any? ->
             rxPermissions
                     .request(Manifest.permission.READ_PHONE_STATE)
                     .subscribe { granted ->
@@ -48,6 +48,6 @@ class SettingsFragment : PreferenceFragmentCompat(), SettingsFragmentPresenter.V
     }
 
     override fun updateVersion(version: String) {
-        findPreference("core.version").summary = version
+        findPreference<Preference>("core.version")?.summary = version
     }
 }

@@ -49,7 +49,7 @@ class Navigator @Inject constructor(
             Timber.d("Fragment already added: %s", fragmentClazz)
             return
         }
-        val newFragment = androidx.fragment.app.Fragment.instantiate(mainActivity, fragmentClazz.name)
+        val newFragment = androidx.fragment.app.Fragment.instantiate(mainActivity!!, fragmentClazz.name)
         val trans = fm.beginTransaction()
         trans.replace(R.id.content_frame, newFragment)
         if (backstack) trans.addToBackStack(null)

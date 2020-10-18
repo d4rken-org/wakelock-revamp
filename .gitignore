@@ -3,3 +3,5 @@
 *.iml
 .gradle
 local.properties
+/fastlane/report.xml
+*.apk

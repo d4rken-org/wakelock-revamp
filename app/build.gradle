@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
-apply plugin: "kotlin-kapt"
+apply plugin: "com.bugsnag.android.gradle"
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-apply plugin: 'com.bugsnag.android.gradle'
+apply plugin: "kotlin-kapt"
 
 def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
 def buildTime = new Date().format("yyyy-MM-dd'T'HH:mm:ss'Z'", TimeZone.getTimeZone("GMT+1"))
 
 bugsnag {
-    overwrite true
+    overwrite = true
 }
 
 android {
@@ -32,7 +32,10 @@ android {
 
     Properties bugsnagProps = new Properties()
     def bugsnagPropsFile = new File(System.properties['user.home'], ".appconfig/${packageName}/bugsnag.properties")
-    if (bugsnagPropsFile.canRead()) bugsnagProps.load(new FileInputStream(bugsnagPropsFile))
+    if (bugsnagPropsFile.canRead()) {
+        println("Reading $bugsnagPropsFile")
+        bugsnagProps.load(new FileInputStream(bugsnagPropsFile))
+    }
 
     defaultConfig {
         applicationId "${packageName}"
@@ -48,7 +51,7 @@ android {
 
         testInstrumentationRunner "${packageName}.ExampleTestRunner"
 
-        manifestPlaceholders = [apikey_bugsnag: ""]
+        manifestPlaceholders = [apikey_bugsnag: bugsnagProps.getProperty("bugsnag.apikey", "")]
 
         vectorDrawables.useSupportLibrary = true
     }
@@ -58,13 +61,15 @@ android {
     }
     buildTypes {
         debug {
-
+            ext.enableBugsnag = false
         }
         release {
             if (signingConfigs.hasProperty('release')) signingConfig signingConfigs.release
             minifyEnabled false
+
+            ext.enableBugsnag = true
+
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            manifestPlaceholders = [apikey_bugsnag: bugsnagProps.getProperty("bugsnag.apikey", "")]
         }
         applicationVariants.all { variant ->
             if (variant.buildType.name == "debug") {
@@ -83,26 +88,21 @@ android {
     }
 }
 
-android {
-    configurations.all {
-        resolutionStrategy.force 'com.google.code.findbugs:jsr305:3.0.2'
-        resolutionStrategy.force "com.android.support:animated-vector-drawable:${versions.supportLibrary}"
-        resolutionStrategy.force "com.android.support:preference-v7:${versions.supportLibrary}"
-    }
-}
 dependencies {
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$versions.kotlin"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.4.0"
 
     // Support libs
-    implementation 'androidx.annotation:annotation:1.0.2'
-    implementation 'androidx.appcompat:appcompat:1.0.2'
-    implementation 'androidx.preference:preference:1.0.0'
-    implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.browser:browser:1.0.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.preference:preference:1.1.1'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.browser:browser:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
 
     // Crashtracking
-    implementation 'com.bugsnag:bugsnag-android:4.10.0'
+    implementation ('com.bugsnag:bugsnag-android:5.2.1') {
+        exclude group: 'com.bugsnag', module: 'bugsnag-plugin-android-ndk'
+    }
 
     // IAPs
     implementation 'com.android.billingclient:billing:1.2.2'
@@ -111,18 +111,18 @@ dependencies {
     implementation 'eu.darken.mvpbakery:library:0.7.1'
 
     // RX
-    implementation "io.reactivex.rxjava2:rxjava:${versions.rxjava}"
-    implementation "io.reactivex.rxjava2:rxandroid:${versions.rxandroid}"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.17"
+    implementation "io.reactivex.rxjava2:rxandroid:2.1.1"
 
     //Dagger
-    kapt "com.google.dagger:dagger-compiler:${versions.dagger}"
-    implementation "com.google.dagger:dagger:${versions.dagger}"
-    implementation "com.google.dagger:dagger-android:${versions.dagger}"
-    implementation "com.google.dagger:dagger-android-support:${versions.dagger}"
+    kapt "com.google.dagger:dagger-compiler:2.22.1"
+    implementation "com.google.dagger:dagger:2.22.1"
+    implementation "com.google.dagger:dagger-android:2.22.1"
+    implementation "com.google.dagger:dagger-android-support:2.22.1"
 
     //Butterknife
-    implementation "com.jakewharton:butterknife:${versions.butterknife}"
-    kapt "com.jakewharton:butterknife-compiler:${versions.butterknife}"
+    implementation "com.jakewharton:butterknife:10.2.1"
+    kapt "com.jakewharton:butterknife-compiler:10.2.1"
 
     //Timber
     implementation "com.jakewharton.timber:timber:4.7.1"
@@ -130,21 +130,21 @@ dependencies {
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
 
     // Testing
-    testImplementation "junit:junit:4.12"
-    testImplementation "org.mockito:mockito-core:2.24.5"
+    testImplementation "junit:junit:4.13"
+    testImplementation "org.mockito:mockito-core:3.0.0"
     testImplementation 'com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0'
     testImplementation 'com.github.tmurakami:dexopener:1.0.2'
 
-    androidTestImplementation "org.mockito:mockito-core:2.24.5"
+    androidTestImplementation "org.mockito:mockito-core:3.0.0"
     androidTestImplementation 'org.mockito:mockito-android:2.23.0'
     androidTestImplementation 'com.github.tmurakami:dexopener:1.0.2'
 
-    androidTestImplementation 'androidx.test:runner:1.1.1'
-    androidTestImplementation 'androidx.test:rules:1.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.1.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.1.1'
-    androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.1.1'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-contrib:3.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-intents:3.2.0'
+    androidTestImplementation 'androidx.test.espresso.idling:idling-concurrent:3.2.0'
 }
 
 kotlin {

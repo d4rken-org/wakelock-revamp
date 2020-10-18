@@ -23,7 +23,7 @@ abstract class SmartFragment : androidx.fragment.app.Fragment() {
         unbinders.add(unbinder)
     }
 
-    override fun onAttach(context: Context?) {
+    override fun onAttach(context: Context) {
         Timber.tag(tag).v("onAttach(context=$context)")
         super.onAttach(context)
     }

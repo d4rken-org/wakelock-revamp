@@ -1,6 +1,7 @@
 package eu.thedarken.wldonate.common.timber
 
 import android.util.Log
+import com.bugsnag.android.Event
 import timber.log.Timber
 import java.util.*
 
@@ -21,11 +22,11 @@ class BugsnagTree : Timber.Tree() {
         }
     }
 
-    fun update(error: com.bugsnag.android.Error) {
+    fun injectLog(event: Event) {
         synchronized(buffer) {
             var i = 1
-            for (message in buffer) error.addToTab("Log", String.format(Locale.US, "%03d", i++), message)
-            error.addToTab("Log", String.format(Locale.US, "%03d", i), Log.getStackTraceString(error.exception))
+            for (message in buffer) event.addMetadata("Log", String.format(Locale.US, "%03d", i++), message)
+            event.addMetadata("Log", String.format(Locale.US, "%03d", i), Log.getStackTraceString(event.originalError))
         }
     }
 

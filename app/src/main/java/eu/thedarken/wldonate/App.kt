@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver
 import android.content.Intent
 import androidx.appcompat.app.AppCompatDelegate
 import com.bugsnag.android.Bugsnag
+import com.bugsnag.android.Configuration
 import eu.darken.mvpbakery.injection.ComponentSource
 import eu.darken.mvpbakery.injection.ManualInjector
 import eu.darken.mvpbakery.injection.activity.HasManualActivityInjector
@@ -29,9 +30,11 @@ open class App : Application(), HasManualActivityInjector, HasManualBroadcastRec
     @Inject lateinit var appComponent: AppComponent
     @Inject lateinit var receiverInjector: ComponentSource<BroadcastReceiver>
     @Inject lateinit var serviceInjector: ComponentSource<Service>
+
     // No touchy! Needs to be initialized such that they sub to the lock-controller.
     @Suppress("unused")
     @Inject lateinit var serviceController: ServiceController
+
     @Suppress("unused")
     @Inject lateinit var widgetController: WidgetController
 
@@ -51,10 +54,16 @@ open class App : Application(), HasManualActivityInjector, HasManualBroadcastRec
                 .build()
                 .injectMembers(this)
 
-        val bugsnagClient = Bugsnag.init(this)
-        bugsnagClient.setUserId(uuidToken.id())
-        bugsnagClient.beforeNotify(BugsnagErrorHandler(settings, bugsnagTree))
-        Timber.i("Bugsnag setup done!")
+        Configuration.load(this)
+                .apply {
+                    setUser(uuidToken.id(), null, null)
+                    autoTrackSessions = true
+                    addOnError(BugsnagErrorHandler(settings, bugsnagTree))
+                }
+                .also {
+                    Bugsnag.start(this, it)
+                    Timber.i("Bugsnag setup done!")
+                }
 
         val originalHandler = Thread.getDefaultUncaughtExceptionHandler()
         Thread.setDefaultUncaughtExceptionHandler { thread, error ->
