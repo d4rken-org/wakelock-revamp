@@ -1,1 +1,1 @@
-Wakelock Revamp - PowerManager
+喚醒鎖修改 - 電源管理

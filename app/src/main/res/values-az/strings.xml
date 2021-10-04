@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wakelock v3</string>
+    <string name="label_settings">Tənzimləmələr</string>
+    <string name="action_start">Başlat</string>
+    <string name="label_wakelock_full">Ekran və Klaviatura</string>
+    <string name="description_wakelock_full">Ekranı və klaviaturanı tam parlaqlıqda saxlayar. Güc düyməsinə bassanız, kilid sistem tərəfindən qeyd-şərtsiz olaraq buraxılacaq.</string>
+    <string name="label_wakelock_partial">Prosessor</string>
+    <string name="description_wakelock_partial">Güc düyməsinə basılsa və ya ekranın açıq qalma vaxtı bitsə belə, CPU-nun gözləmə/qənaət rejiminə keçməsinin qarşısını alar. Cihazınızın oyanma ilə bağlı problemi varsa, istədiyiniz kilid budur.</string>
+    <string name="label_wakelock_screen_dim">Tünd ekran</string>
+    <string name="description_wakelock_screen_dim">Ekranı açıq saxlayar, ancaq qaralmasına icazə verər. Güc düyməsinə bassanız, kilid sistem tərəfindən qeyd-şərtsiz olaraq buraxılacaq.</string>
+    <string name="label_wakelock_screen_bright">Parlaq ekran</string>
+    <string name="description_wakelock_screen_bright">Ekranı tam parlaqlıqda saxlayar. Güc düyməsinə bassanız, kilid sistem tərəfindən qeyd-şərtsiz olaraq buraxılacaq.</string>
+    <string name="label_wifilock_full">Wi-Fi normal</string>
+    <string name="description_wifilock_full">Wi-Fi aktiv qalacaq və normal davranacaq, performans və itki digər faktorlardan asılı olacaq, məs. ekranın sönülü olub-olmamağından.</string>
+    <string name="label_wifilock_full_perf">Wi-Fi yüksək performans</string>
+    <string name="description_wifilock_full_perf">Ekran sönünü olsa belə, Wi-Fi aktiv və yüksək performans rejimində qalacaq.</string>
+    <string name="label_wifilock_scan_only">Wi-Fi yalnız skan</string>
+    <string name="description_wifilock_scan_only">Telefon gözləmə rejiminə keçəndə, Wi-Fi aktiv qalacaq, ancaq yalnız skanlara icazə veriləcək.</string>
+    <string name="label_notification_channel_status">Vəziyyət</string>
+    <string name="status_text_idle">Boşda</string>
+    <string name="galaxy_note4_issue_hint">Galaxy Note 4 problemlərini düzəltdiyini bilinir</string>
+    <string name="label_autostart_on_boot">Açılışda avto başlama</string>
+    <string name="description_autostart_on_boot">Yenidən başlatdıqdan sonra avtomatik olaraq konfiqurasiya edilmiş kilidləri alar.</string>
+    <string name="label_category_other">Digər</string>
+    <string name="label_category_general">Ümumi</string>
+    <string name="pause_description_manually_resume">Oynat düyməsinə basaraq kilidləri əllə davam etdirə bilərsiniz.</string>
+    <string name="pause_description_call_only">Kilidlərə fasilə verildi, çünki yalnız zəng əsnasında bunları alma seçimi fəallaşdırılıb.</string>
+    <string name="action_pause">Fasilə</string>
+    <string name="description_onboarding_what">Bu tətbiq, tərkiblərin, gözləmə rejiminə keçməsini əngəlləyərək cihazın enerji idarəetməsinə təsir edən bir \'wakelock\' əldə etməyinizə icazə verər.</string>
+    <string name="action_download_legacy_version">Köhnə versiyanı endir</string>
+    <string name="description_onboarding_questions">Daha çox sual? Mənə e-poçt göndər!</string>
+    <string name="label_privacy_policy">Gizlilik siyasəti</string>
+    <string name="description_darken">Bu tətbiqi yazan şəxs.</string>
+    <string name="description_privacy_policy">Verilənlərinizdə nə baş verir (məsləhət: heç nə).</string>
+    <string name="label_bugreporting">Xəta hesabatı</string>
+    <string name="msg_thank_you">Təşəkkürlər</string>
+    <string name="description_icon_thanks_max_patchs">Möhtəşəm nişanlar üçün \"Max Patchs\"a təşəkkürlər.</string>
+    <string name="description_bugreporting">Problemlərin daha tez həll olmasına kömək etmək üçün avtomatik xəta hesabatı.</string>
+    <string name="label_call_autostart">Zənglər əsnasında avto-başlatma</string>
+    <string name="description_call_autostart">Seçilmiş oyanmaları yalnız zəng əsnasında əldə edin.</string>
+    <plurals name="x_locks_acquired">
+        <item quantity="one">%d kilid əldə edildi</item>
+        <item quantity="other">%d kilid əldə edildi</item>
+    </plurals>
+</resources>

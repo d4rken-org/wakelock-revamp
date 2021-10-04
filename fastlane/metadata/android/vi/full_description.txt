@@ -11,7 +11,7 @@ Kiểm soát chế độ tiết kiệm năng lượng nếu chúng gây ra lỗi
 Đây là phiên bản được cải tiến từ một ứng dụng của tôi "WakeLock - Trình quản lý năng lượng".
 
 Những quyền cần được cấp để:
-• WAKE_LOCK, to obviously be allowed to acquire wakelocks.
-RECEIVE_BOOT_COMPLETED, để khởi động ứng dụng sau mỗi làn khởi động lại máy.
-• READ_PHONE_STATE, to act on start/ending calls, allowing the app to acquire a lock just for the duration of the call.
-INTERNET, để tự động báo cáo lỗi. Có một tùy chọn để bạn tắt chức năng này, nhưng vì sao phải làm vậy nhỉ🤔?
+• WAKE_LOCK, cần được cho phép để truy nhập wakelock.
+RECEIVE_BOOT_COMPLETED, để khởi động lại ứng dụng sau mỗi lần khởi động lại máy.
+• READ_PHONE_STATE, để hoạt động lúc bắt đầu/kết thúc cuộc gọi, cho phép ứng dụng quyền khoá xuyên suốt thời lượng cuộc gọi.
+• INTERNET, để tự động báo cáo lỗi. Có một tùy chọn để bạn tắt chức năng này, nhưng vì sao phải làm vậy nhỉ🤔?

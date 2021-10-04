@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_settings">සැකසුම්</string>
+    <string name="action_start">අරඹන්න</string>
+    <string name="label_wakelock_full">තිරය සහ යතුරුපුවරුව</string>
+    <string name="label_notification_channel_status">තත්වය</string>
+    <string name="label_category_other">වෙනත්</string>
+    <string name="label_privacy_policy">රහස්‍යතා ප්‍රතිපත්තිය</string>
+    <string name="msg_thank_you">ඔබට ස්තූතියි</string>
+</resources>

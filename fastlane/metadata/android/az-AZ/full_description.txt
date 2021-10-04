@@ -1,0 +1,17 @@
+Wake Lock, Android Enerji və Wifi İdarəçisinə müraciət etməyinizə şərait yaradar.
+İstənilən Android telefon və ya planşetdə istifadə edə bilərsiniz.
+
+Sizin üçün nələr edə biləcəyinə dair nümunələr:
+• Güc İdarəçisini, ekranı açıq saxlamağa məcbur edər
+• Prosessorun gözləmə rejimində işləməyini təmin edər
+• Wifi bağlantısının tam performansda işləməyə davam etməsini təmin edər
+• Film ərzində ekranı tam parlaqlıqda və tünd rejimində saxlayar
+• Əgər problem yaradırsa, enerji qənaəti tədbirlərinə diqqət vermir
+
+Bu "WakeLock - Enerji Qənaəti" tətbiqinin yenilənmiş versiyasıdır.
+
+İcazələr bunlar üçün istifadə olunur:
+• WAKE_LOCK, əslində wakelock-ları əldə etmək üçün.
+• RECEIVE_BOOT_COMPLETED, cihazı yenidən başlatdıqdan sonra tətbiqi başlatmaq.
+• READ_PHONE_STATE, zənglərin başlanğıc/bitmə vaxtında hərəkət etmək, tətbiqin sadəcə zəng vaxtında kilidli qalmasına icazə vermək.
+• INTERNET, avtomatik xəta izləmə. Bunu sıradan çıxartmaq üçün bir seçim var, ancaq bunu etmək nəyə lazım 🙁?
