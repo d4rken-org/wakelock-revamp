@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">سیاست حفظ حریم شخصی</string>
     <string name="description_darken">فردی که این برنامه را نوشته است.</string>
     <string name="description_privacy_policy">چه اتفاقی به داده های شما می افتد‌ (راهنمایی:‌ هیچ چی).</string>
-    <string name="label_bugreporting">گزارش اشکال</string>
     <string name="msg_thank_you">از شما متشكريم</string>
     <string name="description_icon_thanks_max_patchs">با تشکر از Max Patchs برای آیکون های زیبا.</string>
-    <string name="description_bugreporting">گزارش خودکار اشکالات جهت کمک به رفع سریعتر آنها.</string>
     <string name="label_call_autostart">شروع خودکار هنگام تماس</string>
     <string name="description_call_autostart">قفل های انتخاب شده فقط در موقع تماس بدست آورده شود.</string>
     <plurals name="x_locks_acquired">

@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Chính sách riêng tư</string>
     <string name="description_darken">Người đã viết ứng dụng này.</string>
     <string name="description_privacy_policy">Điều gì xảy ra với dữ liệu của bạn (gợi ý: không có gì).</string>
-    <string name="label_bugreporting">Báo cáo lỗi</string>
     <string name="msg_thank_you">Cảm ơn</string>
     <string name="description_icon_thanks_max_patchs">Cảm ơn Max Patchs cho các biểu tượng tuyệt vời.</string>
-    <string name="description_bugreporting">Tự động báo cáo lỗi để giúp khắc phục sự cố nhanh hơn.</string>
     <string name="label_call_autostart">Tự khởi động trong khi gọi</string>
     <string name="description_call_autostart">Có các wakelocks được chọn chỉ trong cuộc gọi.</string>
 </resources>

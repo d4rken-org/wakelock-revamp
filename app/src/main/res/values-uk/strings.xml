@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Політика конфіденційності</string>
     <string name="description_darken">Хлоп, що написав цю програму.</string>
     <string name="description_privacy_policy">Що трапиться з Вашими даними (підказка: нічого).</string>
-    <string name="label_bugreporting">Звіт про помилку</string>
     <string name="msg_thank_you">Дякую</string>
     <string name="description_icon_thanks_max_patchs">Велика подяка Max Patchs за дивовижні іконки.</string>
-    <string name="description_bugreporting">Автоматичне звітування про помилки допомагає швидше виправляти недоліки.</string>
     <string name="label_call_autostart">Автозапуск під час викликів</string>
     <string name="description_call_autostart">Застосування обраних вейклоків лише під час викликів.</string>
     <plurals name="x_locks_acquired">

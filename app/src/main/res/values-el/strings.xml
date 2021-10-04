@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Πολιτική Απορρήτου</string>
     <string name="description_darken">Ο τύπος που έγραψε αυτή την εφαρμογή.</string>
     <string name="description_privacy_policy">Τι συμβαίνει με τα δεδομένα σας (βοήθημα: τίποτα).</string>
-    <string name="label_bugreporting">Αναφορά Σφαλμάτων</string>
     <string name="msg_thank_you">Σας ευχαριστούμε</string>
     <string name="description_icon_thanks_max_patchs">Ευχαριστούμε το Max Patchs για τα υπέροχα εικονίδια.</string>
-    <string name="description_bugreporting">Αυτόματες αναφορές σφαλμάτων για να βοηθήσετε στην επίλυσή τους γρηγορότερα.</string>
     <string name="label_call_autostart">Αυτόματη έναρξη κατά την διάρκεια κλήσης</string>
     <string name="description_call_autostart">Απέκτησε τα επιλεγμένα wakelocks μόνο κατά τη διάρκεια των τηλεφωνικών κλήσεων.</string>
     <plurals name="x_locks_acquired">

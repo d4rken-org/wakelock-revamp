@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Politica sulla privacy</string>
     <string name="description_darken">Il ragazzo che ha scritto questa app.</string>
     <string name="description_privacy_policy">Cosa succede con i vostri dati (suggerimento: niente).</string>
-    <string name="label_bugreporting">Segnalazione di bug</string>
     <string name="msg_thank_you">Grazie</string>
     <string name="description_icon_thanks_max_patchs">Grazie a Max Patchs per le meravigliose icone.</string>
-    <string name="description_bugreporting">Segnalazione automatica dei bug per aiutare a risolvere i problemi più velocemente.</string>
     <string name="label_call_autostart">Avvio automatico durante le chiamate</string>
     <string name="description_call_autostart">Acquisisci i wakelock selezionati solo durante le chiamate.</string>
     <plurals name="x_locks_acquired">

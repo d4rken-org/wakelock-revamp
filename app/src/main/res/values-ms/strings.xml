@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Polisi privasi</string>
     <string name="description_darken">Orang yang menulis apl ini.</string>
     <string name="description_privacy_policy">Apa yang berlaku dengan data anda (petunjuk: tiada apa).</string>
-    <string name="label_bugreporting">Melaporkan Pepijat</string>
     <string name="msg_thank_you">Terima kasih</string>
     <string name="description_icon_thanks_max_patchs">Terima kasih kepada Max Patchs untuk ikon menakjubkan.</string>
-    <string name="description_bugreporting">Laporan pepijat automatik bagi membantu mengatasi isu dengan cepat.</string>
     <string name="label_call_autostart">Automula semasa panggilan</string>
     <string name="description_call_autostart">Memperolehi wakelocks terpilih hanya semasa panggilan.</string>
     <plurals name="x_locks_acquired">

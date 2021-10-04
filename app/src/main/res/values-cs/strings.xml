@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Zásady ochrany soukromí</string>
     <string name="description_darken">Chlápek, který vytvořil tuto alikaci.</string>
     <string name="description_privacy_policy">Co se stane s vašimi daty (vzkaz: nic).</string>
-    <string name="label_bugreporting">Hlášení chyb</string>
     <string name="msg_thank_you">Děkuji</string>
     <string name="description_icon_thanks_max_patchs">Díky Max Patchs za báječné ikony.</string>
-    <string name="description_bugreporting">Automatické hlášení chyb může urychlit jejich opravy.</string>
     <string name="label_call_autostart">Automatické spuštění během hovorů</string>
     <string name="description_call_autostart">Získá vybrané wakelocky pouze během hovorů.</string>
     <plurals name="x_locks_acquired">

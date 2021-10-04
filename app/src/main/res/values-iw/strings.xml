@@ -31,10 +31,8 @@
     <string name="label_privacy_policy">מדיניות פרטיות</string>
     <string name="description_darken">האיש שכתב את האפליקציה הזו.</string>
     <string name="description_privacy_policy">מה קורה עם הנתונים שלכם (רמז: כלום).</string>
-    <string name="label_bugreporting">דיווח באגים</string>
     <string name="msg_thank_you">תודה לכם</string>
     <string name="description_icon_thanks_max_patchs">תודה ל-Max Patchs על סמלים נפלאים.</string>
-    <string name="description_bugreporting">דיווח באגים אוטומטי לסיוע בפתרון בעיות מהר יותר.</string>
     <string name="label_call_autostart">אתחול אוטומטי במהלך שיחות</string>
     <plurals name="x_locks_acquired">
         <item quantity="one">נעילה %d נרכשה</item>

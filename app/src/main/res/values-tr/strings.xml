@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Gizlilik politikası</string>
     <string name="description_darken">Bu uygulamayı yazan kişi.</string>
     <string name="description_privacy_policy">Verilerinizle ne olur (ipucu: hiçbir şey).</string>
-    <string name="label_bugreporting">Hata Raporlama</string>
     <string name="msg_thank_you">Teşekkür ederim</string>
     <string name="description_icon_thanks_max_patchs">Harika ikonlar için Max Patchs\'e teşekkürler.</string>
-    <string name="description_bugreporting">Sorunların daha hızlı düzeltilmesine yardımcı olmak için otomatik hata bildirimi.</string>
     <string name="label_call_autostart">Aramalar sırasında otomatik başlat</string>
     <string name="description_call_autostart">Seçilen uyanmaları sadece aramalar sırasında edinin.</string>
     <plurals name="x_locks_acquired">

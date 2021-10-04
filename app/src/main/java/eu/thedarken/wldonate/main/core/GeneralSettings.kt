@@ -13,7 +13,6 @@ import javax.inject.Inject
 class GeneralSettings @Inject constructor(@ApplicationContext val context: Context) {
     companion object {
         const val PREF_NAME = "settings_core"
-        const val PREF_KEY_BUGTRACKING_ENABLED = "core.bugtracking.enabled"
         const val PREF_KEY_SHOW_ONBOARDING = "core.onboarding.show"
         const val PREF_KEY_LEGACYUSER = "core.legacyuser"
         const val PREF_KEY_SAVED_LOCKS = "core.locks.saved"
@@ -73,9 +72,5 @@ class GeneralSettings @Inject constructor(@ApplicationContext val context: Conte
 
     fun isAutostartCallEnabled(): Boolean {
         return preferences.getBoolean(PREF_KEY_AUTOSTART_CALL, false)
-    }
-
-    fun isBugTrackingEnabled(): Boolean {
-        return preferences.getBoolean(PREF_KEY_BUGTRACKING_ENABLED, true)
     }
 }

@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">गोपनीयता नीति</string>
     <string name="description_darken">वह व्यक्ति जिसने इस ऐप को लिखा था।</string>
     <string name="description_privacy_policy">आपके डेटा के साथ क्या होता है (संकेत: कुछ भी नहीं)।</string>
-    <string name="label_bugreporting">त्रुटि विवरणी भेज रहा है</string>
     <string name="msg_thank_you">धन्यवाद</string>
     <string name="description_icon_thanks_max_patchs">अद्भुद आइकॉन के लिए मैक्स पचस को धन्यवाद</string>
-    <string name="description_bugreporting">स्वचालित त्रुटि विवरणी तेजी से मुद्दों को ठीक करने में सहायता करेगी।</string>
     <string name="label_call_autostart">कॉल के दौरान पुनरारंभ करें</string>
     <string name="description_call_autostart">केवल कॉल के दौरान चयनित वक्लॉक प्राप्त करें।</string>
     <plurals name="x_locks_acquired">

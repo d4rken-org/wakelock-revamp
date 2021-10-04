@@ -17,12 +17,6 @@
     </PreferenceCategory>
     <PreferenceCategory
         android:title="@string/label_category_other">
-        <CheckBoxPreference
-            android:defaultValue="true"
-            android:icon="@drawable/ic_bug_report_white_24dp"
-            android:key="core.bugtracking.enabled"
-            android:summary="@string/description_bugreporting"
-            android:title="@string/label_bugreporting"/>
         <Preference
             android:icon="@drawable/ic_info_white_24dp"
             android:key="core.version"

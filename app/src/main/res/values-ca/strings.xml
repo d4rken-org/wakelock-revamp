@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Política de privadesa</string>
     <string name="description_darken">El noi que va escriure aquesta aplicació.</string>
     <string name="description_privacy_policy">Què passa amb les vostres dades (pista: res).</string>
-    <string name="label_bugreporting">Informes d\'error</string>
     <string name="msg_thank_you">Gràcies</string>
     <string name="description_icon_thanks_max_patchs">Gràcies a Max Patches per les meravelloses icones.</string>
-    <string name="description_bugreporting">Informe automàtic d\'errors per ajudar a corregir problemes més ràpid.</string>
     <string name="label_call_autostart">Inici automàtic durant les trucades</string>
     <string name="description_call_autostart">Aconsegueix els bloquejos d\'activacions seleccionats només durant les trucades.</string>
     <plurals name="x_locks_acquired">

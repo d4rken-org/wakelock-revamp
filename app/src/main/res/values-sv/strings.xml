@@ -11,6 +11,5 @@
     <string name="label_category_other">Annat</string>
     <string name="label_category_general">Allmänt</string>
     <string name="action_pause">Pausa</string>
-    <string name="label_bugreporting">Felrapportering</string>
     <string name="msg_thank_you">Tack</string>
 </resources>

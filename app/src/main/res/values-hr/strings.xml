@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Politika privatnosti</string>
     <string name="description_darken">Lik koji je napravio ovu aplikaciju.</string>
     <string name="description_privacy_policy">Što se događa s vašim podatcima (savjet: ništa).</string>
-    <string name="label_bugreporting">Prijavljivanje greške</string>
     <string name="msg_thank_you">Hvala Vam</string>
     <string name="description_icon_thanks_max_patchs">Hvala Maxu Patchsu na divnim ikonama.</string>
-    <string name="description_bugreporting">Automatsko prijavljivanje grešaka omogućuje brže ispravljanje grešaka.</string>
     <string name="label_call_autostart">Automatsko pokretanje tijekom poziva</string>
     <string name="description_call_autostart">Pribavlja odabrane wakelockove samo tijekom poziva.</string>
     <plurals name="x_locks_acquired">

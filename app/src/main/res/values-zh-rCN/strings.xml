@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">隐私政策</string>
     <string name="description_darken">本 App 的开发者。</string>
     <string name="description_privacy_policy">您的数据会发生什么（提示：无）。</string>
-    <string name="label_bugreporting">Bug 反馈</string>
     <string name="msg_thank_you">谢谢你！</string>
     <string name="description_icon_thanks_max_patchs">感谢 Max Patch 提供出色的图标。</string>
-    <string name="description_bugreporting">自动的错误报告有助更快解决问题。</string>
     <string name="label_call_autostart">通话期间自动启动</string>
     <string name="description_call_autostart">仅在通话期间获取选定的唤醒锁。</string>
     <plurals name="x_locks_acquired">

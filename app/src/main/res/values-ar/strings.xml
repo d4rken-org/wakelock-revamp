@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">سياسة الخصوصية</string>
     <string name="description_darken">الرجل الذي كتب هذا التطبيق.</string>
     <string name="description_privacy_policy">ماذا يحدث مع البيانات الخاصة بك (تلميح: لا شيء).</string>
-    <string name="label_bugreporting">التبليغ عن أخطاء</string>
     <string name="msg_thank_you">شكرا لك</string>
     <string name="description_icon_thanks_max_patchs">شكرا لماكس باتشز على الأيقونات الرائعة.</string>
-    <string name="description_bugreporting">التبليغ التلقائي عن المشاكل للمساعدة في حلها أسرع.</string>
     <string name="label_call_autostart">التشغيل التلقائي أثناء المكالمات</string>
     <string name="description_call_autostart">الحصول على الأقفال المحددة فقط أثناء المكالمات.</string>
     <plurals name="x_locks_acquired">

@@ -35,7 +35,6 @@
     <string name="label_privacy_policy">隱私權政策</string>
     <string name="description_darken">本程式的開發者。</string>
     <string name="description_privacy_policy">您的資料會發生什麼事？提示：nothing (什麼事也沒有)</string>
-    <string name="label_bugreporting">問題反映</string>
     <string name="msg_thank_you">感謝您！</string>
     <string name="description_icon_thanks_max_patchs">感謝 Max Patchs 畫的圖示</string>
     <plurals name="x_locks_acquired">

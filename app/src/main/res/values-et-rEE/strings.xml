@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Privaatsusteatis</string>
     <string name="description_darken">Selle rakenduse kirjutanud kutt.</string>
     <string name="description_privacy_policy">Mis juhtub sinu andmetega (vihje: mitte midagi).</string>
-    <string name="label_bugreporting">Vigadest teatamine</string>
     <string name="msg_thank_you">Aitäh</string>
     <string name="description_icon_thanks_max_patchs">Tänan Max Patchsi toredate ikoonide eest.</string>
-    <string name="description_bugreporting">Automaatne veast teatamine probleemi kiiremaks lahendamiseks.</string>
     <string name="label_call_autostart">Automaatne käivitus kõnede ajal</string>
     <string name="description_call_autostart">Käivita valitud unelukud ainult kõnede ajal.</string>
     <plurals name="x_locks_acquired">

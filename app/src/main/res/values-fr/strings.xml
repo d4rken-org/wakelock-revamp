@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Politique de confidentialité</string>
     <string name="description_darken">Le créateur de cette appli.</string>
     <string name="description_privacy_policy">Qu’arrive-t-il à vos données ? (indice : rien).</string>
-    <string name="label_bugreporting">Signalement des bogues</string>
     <string name="msg_thank_you">Je vous remercie</string>
     <string name="description_icon_thanks_max_patchs">Merci à Max Patchs pour les superbes icônes.</string>
-    <string name="description_bugreporting">Signalement automatique des bogues pour accélérer la résolution des problèmes.</string>
     <string name="label_call_autostart">Lancement automatique pendant les appels</string>
     <string name="description_call_autostart">N’obtenir les verrous d’éveil sélectionnés que pendant les appels.</string>
     <plurals name="x_locks_acquired">

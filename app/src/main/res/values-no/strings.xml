@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Personvernregler</string>
     <string name="description_darken">Fyren som skrev denne appen.</string>
     <string name="description_privacy_policy">Hva skjer med dataene dine (hint: ingenting).</string>
-    <string name="label_bugreporting">Feilrapportering</string>
     <string name="msg_thank_you">Tusen takk</string>
     <string name="description_icon_thanks_max_patchs">Takk til Max Patchs for de fantastiske ikonene.</string>
-    <string name="description_bugreporting">Automatisk feilrapportering for å løse problemer raskere.</string>
     <string name="label_call_autostart">Autostart under samtaler</string>
     <string name="description_call_autostart">Bare krev de valgte vekkelåsene under samtaler.</string>
     <plurals name="x_locks_acquired">

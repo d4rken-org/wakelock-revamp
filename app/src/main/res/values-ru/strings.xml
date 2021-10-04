@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Политика конфиденциальности</string>
     <string name="description_darken">Парень, написавший это приложение.</string>
     <string name="description_privacy_policy">Что происходит с Вашими данными (на самом деле: ничего).</string>
-    <string name="label_bugreporting">Сообщения об ошибках</string>
     <string name="msg_thank_you">Спасибо</string>
     <string name="description_icon_thanks_max_patchs">Спасибо Max Patchs за чудесные значки.</string>
-    <string name="description_bugreporting">Автоматическая отправка сообщений об ошибках для быстрого решения проблем.</string>
     <string name="label_call_autostart">Автозапуск во время вызовов</string>
     <string name="description_call_autostart">Выбранные вэйклоки удерживаются только во время вызовов.</string>
     <plurals name="x_locks_acquired">

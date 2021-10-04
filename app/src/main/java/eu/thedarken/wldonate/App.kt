@@ -6,16 +6,12 @@ import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Intent
 import androidx.appcompat.app.AppCompatDelegate
-import com.bugsnag.android.Bugsnag
-import com.bugsnag.android.Configuration
 import eu.darken.mvpbakery.injection.ComponentSource
 import eu.darken.mvpbakery.injection.ManualInjector
 import eu.darken.mvpbakery.injection.activity.HasManualActivityInjector
 import eu.darken.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
 import eu.darken.mvpbakery.injection.service.HasManualServiceInjector
 import eu.thedarken.wldonate.common.UUIDToken
-import eu.thedarken.wldonate.common.timber.BugsnagErrorHandler
-import eu.thedarken.wldonate.common.timber.BugsnagTree
 import eu.thedarken.wldonate.main.core.GeneralSettings
 import eu.thedarken.wldonate.main.core.receiver.LockCommandReceiver
 import eu.thedarken.wldonate.main.core.service.ServiceController
@@ -27,43 +23,40 @@ import javax.inject.Inject
 open class App : Application(), HasManualActivityInjector, HasManualBroadcastReceiverInjector, HasManualServiceInjector {
 
     lateinit var activityInjector: ManualInjector<Activity>
-    @Inject lateinit var appComponent: AppComponent
-    @Inject lateinit var receiverInjector: ComponentSource<BroadcastReceiver>
-    @Inject lateinit var serviceInjector: ComponentSource<Service>
+
+    @Inject
+    lateinit var appComponent: AppComponent
+
+    @Inject
+    lateinit var receiverInjector: ComponentSource<BroadcastReceiver>
+
+    @Inject
+    lateinit var serviceInjector: ComponentSource<Service>
 
     // No touchy! Needs to be initialized such that they sub to the lock-controller.
     @Suppress("unused")
-    @Inject lateinit var serviceController: ServiceController
+    @Inject
+    lateinit var serviceController: ServiceController
 
     @Suppress("unused")
-    @Inject lateinit var widgetController: WidgetController
+    @Inject
+    lateinit var widgetController: WidgetController
 
-    @Inject lateinit var settings: GeneralSettings
-    @Inject lateinit var uuidToken: UUIDToken
+    @Inject
+    lateinit var settings: GeneralSettings
+
+    @Inject
+    lateinit var uuidToken: UUIDToken
 
     override fun onCreate() {
         super.onCreate()
 
         if (BuildConfig.DEBUG) Timber.plant(Timber.DebugTree())
 
-        val bugsnagTree = BugsnagTree()
-        Timber.plant(bugsnagTree)
-
         DaggerAppComponent.builder()
                 .androidModule(AndroidModule(this))
                 .build()
                 .injectMembers(this)
-
-        Configuration.load(this)
-                .apply {
-                    setUser(uuidToken.id(), null, null)
-                    autoTrackSessions = true
-                    addOnError(BugsnagErrorHandler(settings, bugsnagTree))
-                }
-                .also {
-                    Bugsnag.start(this, it)
-                    Timber.i("Bugsnag setup done!")
-                }
 
         val originalHandler = Thread.getDefaultUncaughtExceptionHandler()
         Thread.setDefaultUncaughtExceptionHandler { thread, error ->

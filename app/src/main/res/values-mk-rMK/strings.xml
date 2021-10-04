@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Политика за приватност</string>
     <string name="description_darken">Човекот кој ја напишал оваа апликација.</string>
     <string name="description_privacy_policy">Што се случува со вашите податоци (совет: ништо).</string>
-    <string name="label_bugreporting">Известување за грешки</string>
     <string name="msg_thank_you">Ви благодарам</string>
     <string name="description_icon_thanks_max_patchs">Благодарение на Макс Патчи за прекрасните икони.</string>
-    <string name="description_bugreporting">Автоматско известување за бубачки за да им помогне поправат проблемите побрзо.</string>
     <string name="label_call_autostart">Автоматски старт за време на повици</string>
     <string name="description_call_autostart">Стекнете ги избраните wakelocks само за време на повиците.</string>
     <plurals name="x_locks_acquired">

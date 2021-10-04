@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Kebijakan Privasi</string>
     <string name="description_darken">Pria yang menulis aplikasi ini.</string>
     <string name="description_privacy_policy">Apa yang terjadi dengan data Anda (petunjuk: tidak ada).</string>
-    <string name="label_bugreporting">Melaporkan Masalah</string>
     <string name="msg_thank_you">Terima kasih</string>
     <string name="description_icon_thanks_max_patchs">Terima kasih kepada Max Patchs untuk ikon yang indah.</string>
-    <string name="description_bugreporting">Pelaporan kesalahan otomatis untuk membantu memperbaiki masalah lebih cepat.</string>
     <string name="label_call_autostart">Mulai otomatis selama panggilan</string>
     <string name="description_call_autostart">Memungkinkan membangunkan penguncian terpilih selama panggilan.</string>
     <plurals name="x_locks_acquired">

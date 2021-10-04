@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Ochrana osobných údajov</string>
     <string name="description_darken">Chlapík, ktorý naprogramoval túto aplikáciu.</string>
     <string name="description_privacy_policy">Čo sa stane s vašimi údajmi (pomôcka: nič).</string>
-    <string name="label_bugreporting">Hlásenie chýb</string>
     <string name="msg_thank_you">Ďakujem</string>
     <string name="description_icon_thanks_max_patchs">Vďaka Max Patchs za super ikony.</string>
-    <string name="description_bugreporting">Automatické hlásenie chýb môže urýchliť opravy chýb.</string>
     <string name="label_call_autostart">Automatické spustenie počas hovorov</string>
     <string name="description_call_autostart">Nastaví vybrané wakelocks iba počas hovorov.</string>
     <plurals name="x_locks_acquired">

@@ -35,10 +35,8 @@
     <string name="label_privacy_policy">Política de privacidade</string>
     <string name="description_darken">O cara que desenvolveu esta aplicação.</string>
     <string name="description_privacy_policy">O que acontece com seus dados? (dica: nada).</string>
-    <string name="label_bugreporting">Relatório de erros</string>
     <string name="msg_thank_you">Obrigado</string>
     <string name="description_icon_thanks_max_patchs">Agradecimentos ao Max Patches pelos ícones maravilhosos.</string>
-    <string name="description_bugreporting">Relatório de erros automático para ajudar a corrigir os problemas mais rapidamente.</string>
     <string name="label_call_autostart">Autostart durante as chamadas</string>
     <string name="description_call_autostart">Adquira os wakelocks selecionados somente durante as chamadas.</string>
     <plurals name="x_locks_acquired">
