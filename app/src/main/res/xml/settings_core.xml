@@ -15,15 +15,23 @@
             android:summary="@string/description_call_autostart"
             android:title="@string/label_call_autostart"/>
     </PreferenceCategory>
-    <PreferenceCategory
-        android:title="@string/label_category_other">
+    <PreferenceCategory android:title="@string/label_category_other">
         <Preference
             android:icon="@drawable/ic_info_white_24dp"
             android:key="core.version"
             android:title="@string/app_name">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://play.google.com/store/apps/details?id=eu.thedarken.wldonate"/>
+                android:data="https://play.google.com/store/apps/details?id=eu.thedarken.wldonate" />
+        </Preference>
+        <Preference
+            android:icon="@drawable/ic_baseline_source_24"
+            android:key="core.github"
+            android:summary="https://github.com/d4rken/wakelock-revamp"
+            android:title="GitHub">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://github.com/d4rken/wakelock-revamp" />
         </Preference>
         <Preference
             android:icon="@drawable/ic_data_usage_white_24dp"
@@ -32,7 +40,7 @@
             android:title="@string/label_privacy_policy">
             <intent
                 android:action="android.intent.action.VIEW"
-                android:data="https://raw.githubusercontent.com/d4rken/wakelock-revamp/master/PRIVACY_POLICY_GPLAY.md"/>
+                android:data="https://raw.githubusercontent.com/d4rken/wakelock-revamp/master/PRIVACY_POLICY_GPLAY.md" />
         </Preference>
         <Preference
             android:icon="@drawable/ic_web_white_24dp"
