@@ -104,9 +104,6 @@ dependencies {
         exclude group: 'com.bugsnag', module: 'bugsnag-plugin-android-ndk'
     }
 
-    // IAPs
-    implementation 'com.android.billingclient:billing:1.2.2'
-
     // MVP lib
     implementation 'eu.darken.mvpbakery:library:0.7.1'
 

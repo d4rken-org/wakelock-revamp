@@ -10,12 +10,6 @@
         android:visible="false"
         app:showAsAction="always"/>
     <item
-        android:id="@+id/action_donate"
-        android:icon="@drawable/ic_coffee_white_24dp"
-        android:orderInCategory="100"
-        android:title="@string/action_donate"
-        app:showAsAction="always"/>
-    <item
         android:id="@+id/action_settings"
         android:icon="@drawable/ic_settings_white_24dp"
         android:orderInCategory="100"

@@ -1,9 +1,7 @@
 package eu.thedarken.wldonate.main.ui.manager
 
-import android.app.Activity
 import eu.darken.mvpbakery.base.Presenter
 import eu.darken.mvpbakery.injection.ComponentPresenter
-import eu.thedarken.wldonate.IAPHelper
 import eu.thedarken.wldonate.main.core.GeneralSettings
 import eu.thedarken.wldonate.main.core.locks.Lock
 import eu.thedarken.wldonate.main.core.locks.LockController
@@ -21,19 +19,13 @@ class ManagerFragmentPresenter @Inject constructor(
         private val navigator: Navigator,
         private val controller: LockController,
         private val settings: GeneralSettings,
-        private val iapHelper: IAPHelper
 ) : ComponentPresenter<ManagerFragmentPresenter.View, ManagerFragmentComponent>() {
     enum class LocksState {
         NONE, PAUSED, ACTIVE
     }
 
-    enum class DonateState {
-        UNKNOWN, NONE, SOME, ALL
-    }
-
     internal var locksState: LocksState = LocksState.NONE
     private var lockSub: Disposable = Disposables.disposed()
-    private var donationSub: Disposable = Disposables.disposed()
 
     override fun onBindChange(view: View?) {
         super.onBindChange(view)
@@ -62,24 +54,6 @@ class ManagerFragmentPresenter @Inject constructor(
                     }
         } else if (view == null) {
             lockSub.dispose()
-        }
-
-        if (view != null && donationSub.isDisposed) {
-            donationSub = iapHelper.upgradesPublisher
-                    .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                    .map {
-                        val purchases = ArrayList<IAPHelper.Upgrade.Type>()
-                        it.forEach { if (it.value.isPurchased()) purchases.add(it.key) }
-                        purchases
-                    }
-                    .subscribe { purchases ->
-                        withView {
-                            val level: Float = (purchases.size / IAPHelper.Upgrade.Type.values().size).toFloat()
-                            it.updateDonationOptions(level)
-                        }
-                    }
-        } else {
-            donationSub.dispose()
         }
     }
 
@@ -119,31 +93,9 @@ class ManagerFragmentPresenter @Inject constructor(
                 .subscribe()
     }
 
-    fun onDonateScreenClicked() {
-        iapHelper.upgradesPublisher
-                .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
-                .map {
-                    val nonPurchased = ArrayList(it.values)
-                    it.values.forEach { if (it.isPurchased()) nonPurchased.remove(it) }
-                    return@map nonPurchased
-                }
-                .subscribe { openPurchases -> withView { it.showDonationScreen(openPurchases) } }
-    }
-
-    fun onDonate(upgrade: IAPHelper.Upgrade, activity: Activity) {
-        iapHelper.startDonationFlow(upgrade, activity)
-        withView { it.showThanks() }
-    }
-
     interface View : Presenter.View {
         fun showLocks(locks: List<Lock>, saved: Collection<Lock.Type>)
 
         fun updatePausedInfo(locksState: LocksState, onCallOption: Boolean)
-
-        fun updateDonationOptions(level: Float)
-
-        fun showDonationScreen(donations: List<IAPHelper.Upgrade>)
-
-        fun showThanks()
     }
 }
