@@ -2,6 +2,7 @@
 
 # Wakelock - Power Manager
 [![Build Status](https://travis-ci.org/d4rken/wakelock-revamp.svg?branch=dev)](https://travis-ci.org/d4rken/wakelock-revamp)
+[![Github All Releases](https://img.shields.io/github/downloads/d4rken/wakelock-revamp/total.svg)](https://github.com/d4rken/wakelock-revamp/releases/latest)
 
 Wakelock gives you control over the Android Power- and WifiManager.
 For example, you can force the PowerManager to keep the screen on or have the CPU still running in standby mode or make sure the Wifi connection keeps running at full performance.
