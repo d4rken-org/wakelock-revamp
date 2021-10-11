@@ -4,7 +4,7 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.telephony.TelephonyManager
-import eu.darken.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
+import eu.thedarken.wldonate.common.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
 import eu.thedarken.wldonate.main.core.GeneralSettings
 import eu.thedarken.wldonate.main.core.locks.Lock
 import eu.thedarken.wldonate.main.core.locks.LockController

@@ -6,11 +6,11 @@ import android.view.View
 import android.view.ViewGroup
 import butterknife.BindView
 import butterknife.ButterKnife
-import eu.darken.mvpbakery.base.MVPBakery
-import eu.darken.mvpbakery.base.ViewModelRetainer
-import eu.darken.mvpbakery.injection.InjectedPresenter
-import eu.darken.mvpbakery.injection.PresenterInjectionCallback
 import eu.thedarken.wldonate.R
+import eu.thedarken.wldonate.common.mvpbakery.base.MVPBakery
+import eu.thedarken.wldonate.common.mvpbakery.base.ViewModelRetainer
+import eu.thedarken.wldonate.common.mvpbakery.injection.InjectedPresenter
+import eu.thedarken.wldonate.common.mvpbakery.injection.PresenterInjectionCallback
 import eu.thedarken.wldonate.common.smart.SmartFragment
 import javax.inject.Inject
 

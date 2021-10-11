@@ -6,12 +6,12 @@ import android.app.Service
 import android.content.BroadcastReceiver
 import android.content.Intent
 import androidx.appcompat.app.AppCompatDelegate
-import eu.darken.mvpbakery.injection.ComponentSource
-import eu.darken.mvpbakery.injection.ManualInjector
-import eu.darken.mvpbakery.injection.activity.HasManualActivityInjector
-import eu.darken.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
-import eu.darken.mvpbakery.injection.service.HasManualServiceInjector
 import eu.thedarken.wldonate.common.UUIDToken
+import eu.thedarken.wldonate.common.mvpbakery.injection.ComponentSource
+import eu.thedarken.wldonate.common.mvpbakery.injection.ManualInjector
+import eu.thedarken.wldonate.common.mvpbakery.injection.activity.HasManualActivityInjector
+import eu.thedarken.wldonate.common.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
+import eu.thedarken.wldonate.common.mvpbakery.injection.service.HasManualServiceInjector
 import eu.thedarken.wldonate.main.core.GeneralSettings
 import eu.thedarken.wldonate.main.core.receiver.LockCommandReceiver
 import eu.thedarken.wldonate.main.core.service.ServiceController

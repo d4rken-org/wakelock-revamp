@@ -1,7 +1,7 @@
 package eu.thedarken.wldonate.main.ui.manager
 
-import eu.darken.mvpbakery.base.Presenter
-import eu.darken.mvpbakery.injection.ComponentPresenter
+import eu.thedarken.wldonate.common.mvpbakery.base.Presenter
+import eu.thedarken.wldonate.common.mvpbakery.injection.ComponentPresenter
 import eu.thedarken.wldonate.main.core.GeneralSettings
 import eu.thedarken.wldonate.main.core.locks.Lock
 import eu.thedarken.wldonate.main.core.locks.LockController

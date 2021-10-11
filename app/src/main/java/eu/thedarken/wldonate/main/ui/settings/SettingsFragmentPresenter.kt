@@ -1,9 +1,9 @@
 package eu.thedarken.wldonate.main.ui.settings
 
 import android.content.pm.PackageManager
-import eu.darken.mvpbakery.base.Presenter
-import eu.darken.mvpbakery.injection.ComponentPresenter
 import eu.thedarken.wldonate.BuildConfig
+import eu.thedarken.wldonate.common.mvpbakery.base.Presenter
+import eu.thedarken.wldonate.common.mvpbakery.injection.ComponentPresenter
 import eu.thedarken.wldonate.main.core.GeneralSettings
 import io.reactivex.Single
 import io.reactivex.android.schedulers.AndroidSchedulers

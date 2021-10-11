@@ -6,9 +6,9 @@ import dagger.Module
 import dagger.Subcomponent
 import dagger.android.AndroidInjector
 import dagger.multibindings.IntoMap
-import eu.darken.mvpbakery.injection.PresenterComponent
-import eu.darken.mvpbakery.injection.activity.ActivityComponent
-import eu.darken.mvpbakery.injection.fragment.FragmentKey
+import eu.thedarken.wldonate.common.mvpbakery.injection.PresenterComponent
+import eu.thedarken.wldonate.common.mvpbakery.injection.activity.ActivityComponent
+import eu.thedarken.wldonate.common.mvpbakery.injection.fragment.FragmentKey
 import eu.thedarken.wldonate.main.ui.manager.ManagerFragment
 import eu.thedarken.wldonate.main.ui.manager.ManagerFragmentComponent
 import eu.thedarken.wldonate.main.ui.onboarding.OnboardingFragment

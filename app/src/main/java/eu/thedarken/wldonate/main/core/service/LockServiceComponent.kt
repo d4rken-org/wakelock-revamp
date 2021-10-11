@@ -1,7 +1,7 @@
 package eu.thedarken.wldonate.main.core.service
 
 import dagger.Subcomponent
-import eu.darken.mvpbakery.injection.service.ServiceComponent
+import eu.thedarken.wldonate.common.mvpbakery.injection.service.ServiceComponent
 
 
 @LockServiceComponent.Scope

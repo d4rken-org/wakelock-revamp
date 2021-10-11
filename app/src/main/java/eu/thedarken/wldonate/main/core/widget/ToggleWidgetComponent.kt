@@ -2,7 +2,7 @@ package eu.thedarken.wldonate.main.core.widget
 
 
 import dagger.Subcomponent
-import eu.darken.mvpbakery.injection.broadcastreceiver.BroadcastReceiverComponent
+import eu.thedarken.wldonate.common.mvpbakery.injection.broadcastreceiver.BroadcastReceiverComponent
 
 @ToggleWidgetComponent.Scope
 @Subcomponent

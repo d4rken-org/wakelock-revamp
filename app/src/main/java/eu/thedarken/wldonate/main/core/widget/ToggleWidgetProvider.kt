@@ -16,9 +16,9 @@ import android.view.View
 import android.widget.RemoteViews
 import androidx.annotation.DrawableRes
 import androidx.appcompat.content.res.AppCompatResources
-import eu.darken.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
 import eu.thedarken.wldonate.R
 import eu.thedarken.wldonate.common.ApiHelper
+import eu.thedarken.wldonate.common.mvpbakery.injection.broadcastreceiver.HasManualBroadcastReceiverInjector
 import eu.thedarken.wldonate.main.core.WidgetSettingsRepo
 import eu.thedarken.wldonate.main.core.locks.Lock
 import eu.thedarken.wldonate.main.core.locks.LockController

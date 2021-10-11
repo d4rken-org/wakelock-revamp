@@ -8,11 +8,11 @@ import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.Toolbar
 import butterknife.BindView
 import butterknife.ButterKnife
-import eu.darken.mvpbakery.base.MVPBakery
-import eu.darken.mvpbakery.base.ViewModelRetainer
-import eu.darken.mvpbakery.injection.InjectedPresenter
-import eu.darken.mvpbakery.injection.PresenterInjectionCallback
 import eu.thedarken.wldonate.R
+import eu.thedarken.wldonate.common.mvpbakery.base.MVPBakery
+import eu.thedarken.wldonate.common.mvpbakery.base.ViewModelRetainer
+import eu.thedarken.wldonate.common.mvpbakery.injection.InjectedPresenter
+import eu.thedarken.wldonate.common.mvpbakery.injection.PresenterInjectionCallback
 import eu.thedarken.wldonate.common.smart.SmartFragment
 import eu.thedarken.wldonate.main.core.locks.Lock
 import javax.inject.Inject

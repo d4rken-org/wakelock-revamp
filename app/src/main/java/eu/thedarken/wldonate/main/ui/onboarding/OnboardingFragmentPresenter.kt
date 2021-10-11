@@ -1,7 +1,7 @@
 package eu.thedarken.wldonate.main.ui.onboarding
 
-import eu.darken.mvpbakery.base.Presenter
-import eu.darken.mvpbakery.injection.ComponentPresenter
+import eu.thedarken.wldonate.common.mvpbakery.base.Presenter
+import eu.thedarken.wldonate.common.mvpbakery.injection.ComponentPresenter
 import eu.thedarken.wldonate.main.core.GeneralSettings
 import eu.thedarken.wldonate.main.ui.Navigator
 import javax.inject.Inject

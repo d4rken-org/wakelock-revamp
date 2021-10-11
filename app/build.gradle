@@ -50,8 +50,6 @@ android {
             if (signingConfigs.hasProperty('release')) signingConfig signingConfigs.release
             minifyEnabled false
 
-            ext.enableBugsnag = true
-
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
         applicationVariants.all { variant ->
@@ -72,14 +70,16 @@ android {
 }
 
 dependencies {
-    implementation project(':library-mvp-bakery')
-
     // Support libs
     implementation 'androidx.annotation:annotation:1.2.0'
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'androidx.preference:preference-ktx:1.1.1'
     implementation 'com.google.android.material:material:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+
+    implementation "androidx.lifecycle:lifecycle-common:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
     // RX
     implementation "io.reactivex.rxjava2:rxjava:2.2.21"

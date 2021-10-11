@@ -5,7 +5,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.android.AndroidInjector
 import dagger.multibindings.IntoMap
-import eu.darken.mvpbakery.injection.broadcastreceiver.BroadcastReceiverKey
+import eu.thedarken.wldonate.common.mvpbakery.injection.broadcastreceiver.BroadcastReceiverKey
 import eu.thedarken.wldonate.main.core.receiver.LockCommandReceiver
 import eu.thedarken.wldonate.main.core.receiver.LockCommandReceiverComponent
 import eu.thedarken.wldonate.main.core.widget.ToggleWidgetComponent

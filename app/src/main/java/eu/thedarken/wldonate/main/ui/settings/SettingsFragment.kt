@@ -6,11 +6,11 @@ import androidx.preference.CheckBoxPreference
 import androidx.preference.Preference
 import androidx.preference.PreferenceFragmentCompat
 import com.tbruyelle.rxpermissions2.RxPermissions
-import eu.darken.mvpbakery.base.MVPBakery
-import eu.darken.mvpbakery.base.ViewModelRetainer
-import eu.darken.mvpbakery.injection.InjectedPresenter
-import eu.darken.mvpbakery.injection.PresenterInjectionCallback
 import eu.thedarken.wldonate.R
+import eu.thedarken.wldonate.common.mvpbakery.base.MVPBakery
+import eu.thedarken.wldonate.common.mvpbakery.base.ViewModelRetainer
+import eu.thedarken.wldonate.common.mvpbakery.injection.InjectedPresenter
+import eu.thedarken.wldonate.common.mvpbakery.injection.PresenterInjectionCallback
 import eu.thedarken.wldonate.main.core.GeneralSettings
 
 

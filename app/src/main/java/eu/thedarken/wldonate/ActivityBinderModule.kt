@@ -5,7 +5,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.android.AndroidInjector
 import dagger.multibindings.IntoMap
-import eu.darken.mvpbakery.injection.activity.ActivityKey
+import eu.thedarken.wldonate.common.mvpbakery.injection.activity.ActivityKey
 import eu.thedarken.wldonate.main.ui.MainActivity
 import eu.thedarken.wldonate.main.ui.MainActivityComponent
 

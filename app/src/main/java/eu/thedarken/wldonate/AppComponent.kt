@@ -3,7 +3,7 @@ package eu.thedarken.wldonate
 import android.app.Activity
 import dagger.Component
 import dagger.MembersInjector
-import eu.darken.mvpbakery.injection.ComponentSource
+import eu.thedarken.wldonate.common.mvpbakery.injection.ComponentSource
 import eu.thedarken.wldonate.main.core.locks.LockModule
 
 

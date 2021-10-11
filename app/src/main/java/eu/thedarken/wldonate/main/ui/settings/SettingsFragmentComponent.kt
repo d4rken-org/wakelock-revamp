@@ -2,8 +2,8 @@ package eu.thedarken.wldonate.main.ui.settings
 
 
 import dagger.Subcomponent
-import eu.darken.mvpbakery.injection.PresenterComponent
-import eu.darken.mvpbakery.injection.fragment.FragmentComponent
+import eu.thedarken.wldonate.common.mvpbakery.injection.PresenterComponent
+import eu.thedarken.wldonate.common.mvpbakery.injection.fragment.FragmentComponent
 
 @SettingsFragmentComponent.Scope
 @Subcomponent

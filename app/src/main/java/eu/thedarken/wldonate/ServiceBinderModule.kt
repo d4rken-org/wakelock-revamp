@@ -5,7 +5,7 @@ import dagger.Binds
 import dagger.Module
 import dagger.android.AndroidInjector
 import dagger.multibindings.IntoMap
-import eu.darken.mvpbakery.injection.service.ServiceKey
+import eu.thedarken.wldonate.common.mvpbakery.injection.service.ServiceKey
 import eu.thedarken.wldonate.main.core.service.LockService
 import eu.thedarken.wldonate.main.core.service.LockServiceComponent
 
