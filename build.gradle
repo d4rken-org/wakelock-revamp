@@ -3,7 +3,9 @@ buildscript {
             'compileSdk': 30,
             'minSdk'    : 16,
             'targetSdk' : 30,
-
+            'deps'      : [
+                    'dagger': '2.21',
+            ],
             'version'   : [
                     'major': 3,
                     'minor': 3,
@@ -16,21 +18,21 @@ buildscript {
     ext.buildConfig.version['fullName'] = "${buildConfig.version.name}.${buildConfig.version.build}"
     ext.buildConfig.version['code'] = buildConfig.version.major * 1000000 + buildConfig.version.minor * 10000 + buildConfig.version.patch * 100 + buildConfig.version.build
 
+
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.1.0'
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.4.0"
+        classpath 'com.android.tools.build:gradle:7.0.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.31"
     }
 }
 
 allprojects {
     repositories {
         google()
-        jcenter()
-
+        mavenCentral()
         maven { url 'https://jitpack.io' }
     }
 }

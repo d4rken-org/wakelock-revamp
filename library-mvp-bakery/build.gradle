@@ -1,0 +1,45 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android-extensions'
+    id 'kotlin-android'
+}
+
+android {
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    compileSdkVersion buildConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion buildConfig.minSdk
+        targetSdkVersion buildConfig.targetSdk
+
+        consumerProguardFiles 'proguard-rules.pro'
+    }
+    buildTypes {
+        debug {
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation "androidx.lifecycle:lifecycle-common:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.3.1"
+    implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
+
+    implementation "androidx.annotation:annotation:1.2.0"
+    implementation "androidx.appcompat:appcompat:1.3.1"
+    implementation "androidx.preference:preference-ktx:1.1.1"
+
+    implementation "com.google.dagger:dagger:${buildConfig.deps.dagger}"
+    implementation "com.google.dagger:dagger-android:${buildConfig.deps.dagger}"
+    implementation "com.google.dagger:dagger-android-support:${buildConfig.deps.dagger}"
+
+    annotationProcessor "com.google.dagger:dagger-compiler:${buildConfig.deps.dagger}"
+    annotationProcessor "com.google.dagger:dagger-android-processor:${buildConfig.deps.dagger}"
+}
