@@ -19,9 +19,7 @@ Here is a 67 page thread of people with this issue: [XDA-Thread](https://forum.x
 
 Theoretically yes, but it will make the app more unreliable. A visible notification increases an apps priority such that it is less likely to be killed by the system to free resources if another app needs more resources.
 
-
 ## Contributions
-* Are you multilingual? [Translate this app](https://crowdin.com/project/wakelock) to make it more accessible.
 * If you can code, maybe submit a PR fixing an [open issue](https://github.com/d4rken/wakelock-revamp/issues).
 
 ## Download
