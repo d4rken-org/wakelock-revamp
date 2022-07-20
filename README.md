@@ -7,6 +7,8 @@
 Wakelock gives you control over the Android Power- and WifiManager.
 For example, you can force the PowerManager to keep the screen on or have the CPU still running in standby mode or make sure the Wifi connection keeps running at full performance.
 
+A successor to the original: [Wakelock](https://github.com/d4rken/wakelock).
+
 ## FAQ
 
 * What's up with the Samsung Galaxy Note 4?
