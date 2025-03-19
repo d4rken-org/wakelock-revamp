@@ -1,7 +1,6 @@
 <img src="https://user-images.githubusercontent.com/1439229/44613748-affbdb00-a818-11e8-8a01-213e77638d14.png" width="300">
 
 # Wakelock - Power Manager
-[![Build Status](https://travis-ci.org/d4rken/wakelock-revamp.svg?branch=dev)](https://travis-ci.org/d4rken/wakelock-revamp)
 [![Github All Releases](https://img.shields.io/github/downloads/d4rken/wakelock-revamp/total.svg)](https://github.com/d4rken/wakelock-revamp/releases/latest)
 
 Wakelock gives you control over the Android Power- and WifiManager.
