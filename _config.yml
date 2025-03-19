@@ -1,0 +1,21 @@
+theme: minima
+plugins:
+  - jekyll-relative-links
+relative_links:
+  enabled: true
+  collections: true
+
+title: "Wakelock Revamp"
+description: "Manual wake locks on Android."
+author: "by Matthias Urhahn"
+
+include:
+  - PRIVACY_POLICY_GPLAY.md
+exclude:
+  - buildSrc
+  - gradle/wrapper
+  - fastlane
+  - Gemfile
+  - Gemfile.lock
+  - crowdin*
+  - app
